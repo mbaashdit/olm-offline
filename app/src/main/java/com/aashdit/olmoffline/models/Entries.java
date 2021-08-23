@@ -5,7 +5,7 @@ import org.json.JSONObject;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
-public class Entries extends RealmObject {
+public class Entries  {
 
     public String reportingLevel;
     public String activityName;
@@ -17,7 +17,6 @@ public class Entries extends RealmObject {
     private String bankBalance;
     public String profit;
 
-    @PrimaryKey
     private Long orgId;
     private Long goats;
     private Long bucks;

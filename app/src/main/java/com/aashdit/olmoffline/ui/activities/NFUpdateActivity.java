@@ -207,7 +207,7 @@ public class NFUpdateActivity extends AppCompatActivity implements MonthListAdap
                     generateMonth(selectedYear);
                     Year = Integer.parseInt(selectedYear);
                     monthListAdapter.notifyDataSetChanged();
-                    getViewDetails();
+//                    getViewDetails();
                     isFirst = false;
                 } else {
                     selectedYear = yearsList.get(position);

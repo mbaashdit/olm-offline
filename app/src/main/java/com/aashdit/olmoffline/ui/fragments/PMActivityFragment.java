@@ -184,7 +184,7 @@ public class PMActivityFragment extends Fragment implements /*ShgActivityListAda
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(Objects.requireNonNull(getActivity()));
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getActivity());
 
         mConnectivityChangeReceiver = new ConnectivityChangeReceiver();
         mConnectivityChangeReceiver.setConnectivityReceiverListener(this);
@@ -271,7 +271,7 @@ public class PMActivityFragment extends Fragment implements /*ShgActivityListAda
             public void onClick(View v) {
                 reportingLevelCode = "SHG";
 //                getSchemes();
-                mTvShg.setBackground(ContextCompat.getDrawable(Objects.requireNonNull(getActivity()), R.drawable.ic_selected));
+                mTvShg.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.ic_selected));
                 mTvShg.setTextColor(Color.parseColor("#DD084B"));
                 mTvCluster.setBackgroundResource(0);
                 mTvCluster.setTextColor(Color.parseColor("#000000"));
@@ -301,7 +301,7 @@ public class PMActivityFragment extends Fragment implements /*ShgActivityListAda
                 reportingLevelCode = "CLF";
                 mTvShg.setBackgroundResource(0);
                 mTvShg.setTextColor(Color.parseColor("#000000"));
-                mTvCluster.setBackground(ContextCompat.getDrawable(Objects.requireNonNull(getActivity()), R.drawable.ic_selected));
+                mTvCluster.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.ic_selected));
                 mTvCluster.setTextColor(Color.parseColor("#DD084B"));
                 mTvHousehold.setBackgroundResource(0);
                 mTvHousehold.setTextColor(Color.parseColor("#000000"));
@@ -807,11 +807,13 @@ public class PMActivityFragment extends Fragment implements /*ShgActivityListAda
             }
         }
 
-        shgArrayList = new ArrayList<>(hhshgLists);
-        shgSpnAdapter = new ShgListForHHSpnAdapter(getActivity(), shgArrayList);
-        mSpnShgList.setAdapter(shgSpnAdapter);
+        if (hhshgLists != null) {
+            shgArrayList = new ArrayList<>(hhshgLists);
+            shgSpnAdapter = new ShgListForHHSpnAdapter(getActivity(), shgArrayList);
+            mSpnShgList.setAdapter(shgSpnAdapter);
 
-        getHouseHoldList();
+            getHouseHoldList();
+        }
     }
     RealmList<HhList> householdsList;
     private void getHouseHoldList() {
@@ -1738,12 +1740,12 @@ public class PMActivityFragment extends Fragment implements /*ShgActivityListAda
     }
 
     private void registerNetworkBroadcast() {
-        Objects.requireNonNull(getActivity()).registerReceiver(mConnectivityChangeReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        getActivity().registerReceiver(mConnectivityChangeReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
     }
 
     protected void unregisterNetworkChanges() {
         try {
-            Objects.requireNonNull(getActivity()).unregisterReceiver(mConnectivityChangeReceiver);
+            getActivity().unregisterReceiver(mConnectivityChangeReceiver);
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }

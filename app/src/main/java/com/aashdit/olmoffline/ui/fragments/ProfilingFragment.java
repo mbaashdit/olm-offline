@@ -46,6 +46,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -129,7 +130,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
         mConnectivityChangeReceiver.setConnectivityReceiverListener(this);
         isConnected = mConnectivityChangeReceiver.getConnectionStatus(getContext());
         registerNetworkBroadcast();
-        binding.progressCircular.setVisibility(View.GONE);
+//        binding.progressCircular.setVisibility(View.GONE);
         sp = SharedPrefManager.getInstance(getActivity());
         token = sp.getStringData(Constant.APP_TOKEN);
         userType = sp.getStringData(Constant.USER_ROLE);
@@ -212,7 +213,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                             getFarmingHHListData();
 
                         } else if (sp.getStringData(Constant.USER_ROLE).equals(Constant.UMITRA)) {
-                            //Todo call um shg list & km hh list
+                            //Todo call um pg list
                             getSchemesWrtActivityByType();
                             getNonFarmingShgListData();
                             getNonFarmingHHListData();
@@ -252,7 +253,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
      * @method to get HH List data for UM activities
      */
     private void getNonFarmingHHListData() {
-        binding.progressCircular.setVisibility(View.VISIBLE);
+//        binding.progressCircular.setVisibility(View.VISIBLE);
         AndroidNetworking.get(BuildConfig.BASE_URL + Constant.API_PATH + "nonfarm/offline/search/hh")
                 .addHeaders("Authorization", "Bearer " + token)
                 .setTag("FarmingHhList")
@@ -262,7 +263,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                     @Override
                     public void onResponse(String response) {
 //                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         if (Utility.isStringValid(response)) {
 
 //                            isShgList = true;
@@ -287,7 +288,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
 
                                         realm.executeTransaction(new Realm.Transaction() {
                                             @Override
-                                            public void execute(Realm realm1) {
+                                            public void execute(@NotNull Realm realm1) {
                                                 realm1.delete(SchemeHHSearch.class);
                                                 realm1.delete(ActivityHHSearch.class);
                                                 realm1.delete(HHSHGList.class);
@@ -308,86 +309,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                     @Override
                     public void onError(ANError anError) {
 //                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
-                        Log.e(TAG, "onError: " + anError.getErrorDetail());
-                        try {
-                            JSONObject errObj = new JSONObject(anError.getErrorBody());
-                            int statusCode = errObj.optInt("status");
-                            if (statusCode == 500) {
-                                sp.clear();
-                                Intent intent = new Intent(getActivity(), MainActivity.class);
-                                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
-                                        Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
-                                getActivity().finish();
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
-    }
-
-    /**
-     * @method to get HH List data for KM activities
-     */
-    private void getFarmingHHListData() {
-        binding.progressCircular.setVisibility(View.VISIBLE);
-        AndroidNetworking.get(BuildConfig.BASE_URL + Constant.API_PATH + "farming/offline/search/hh")
-                .addHeaders("Authorization", "Bearer " + token)
-                .setTag("FarmingHhList")
-                .setPriority(Priority.HIGH)
-                .build()
-                .getAsString(new StringRequestListener() {
-                    @Override
-                    public void onResponse(String response) {
-//                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
-                        if (Utility.isStringValid(response)) {
-
-//                            isShgList = true;
-                            isHhListLoading = true;
-                            try {
-                                JSONObject object = new JSONObject(response);
-                                if (object.optBoolean("outcome")) {
-
-                                    dismissProgressDialog();
-                                    Toast.makeText(getActivity(), "Sync Successfully", Toast.LENGTH_SHORT).show();
-
-                                    JSONArray array = object.optJSONArray("data");
-                                    if (array != null && array.length() > 0) {
-                                        schemeSearches.clear();
-
-                                        for (int i = 0; i < array.length(); i++) {
-                                            SchemeHHSearch scheme = SchemeHHSearch.parseSchemeSearch(array.optJSONObject(i), userType,"hh");
-                                            if (scheme.isActive) {
-                                                schemeHHSearches.add(scheme);
-                                            }
-                                        }
-
-                                        realm.executeTransaction(new Realm.Transaction() {
-                                            @Override
-                                            public void execute(Realm realm1) {
-                                                realm1.delete(SchemeHHSearch.class);
-                                                realm1.delete(ActivityHHSearch.class);
-                                                realm1.delete(HHSHGList.class);
-                                                realm1.delete(HhList.class);
-                                                realm1.insertOrUpdate(schemeHHSearches);
-                                            }
-                                        });
-                                    }
-                                }
-
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onError(ANError anError) {
-//                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         Log.e(TAG, "onError: " + anError.getErrorDetail());
                         try {
                             JSONObject errObj = new JSONObject(anError.getErrorBody());
@@ -411,7 +333,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
      * @method to get SHG List data for UM activities
      */
     private void getNonFarmingShgListData() {
-        binding.progressCircular.setVisibility(View.VISIBLE);
+//        binding.progressCircular.setVisibility(View.VISIBLE);
         AndroidNetworking.get(BuildConfig.BASE_URL + Constant.API_PATH + "nonfarm/offline/search/shg")
                 .addHeaders("Authorization", "Bearer " + token)
                 .setTag("FarmingShgList")
@@ -420,7 +342,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                 .getAsString(new StringRequestListener() {
                     @Override
                     public void onResponse(String response) {
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         if (Utility.isStringValid(response)) {
 
                             isShgListLoading = true;
@@ -444,7 +366,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
 
                                         realm.executeTransaction(new Realm.Transaction() {
                                             @Override
-                                            public void execute(Realm realm1) {
+                                            public void execute(@NotNull Realm realm1) {
                                                 realm1.delete(SchemeSHGSearch.class);
                                                 realm1.delete(ActivitySHGSearch.class);
                                                 realm1.delete(ShgList.class);
@@ -465,7 +387,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                     @Override
                     public void onError(ANError anError) {
 //                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         Log.e(TAG, "onError: " + anError.getErrorDetail());
                         try {
                             JSONObject errObj = new JSONObject(anError.getErrorBody());
@@ -487,10 +409,89 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
 
 
     /**
+     * @method to get HH List data for KM activities
+     */
+    private void getFarmingHHListData() {
+//        binding.progressCircular.setVisibility(View.VISIBLE);
+        AndroidNetworking.get(BuildConfig.BASE_URL + Constant.API_PATH + "farming/offline/search/hh")
+                .addHeaders("Authorization", "Bearer " + token)
+                .setTag("FarmingHhList")
+                .setPriority(Priority.HIGH)
+                .build()
+                .getAsString(new StringRequestListener() {
+                    @Override
+                    public void onResponse(String response) {
+//                        progressDialogue.hide();
+//                        binding.progressCircular.setVisibility(View.GONE);
+                        if (Utility.isStringValid(response)) {
+
+//                            isShgList = true;
+                            isHhListLoading = true;
+                            try {
+                                JSONObject object = new JSONObject(response);
+                                if (object.optBoolean("outcome")) {
+
+                                    dismissProgressDialog();
+                                    Toast.makeText(getActivity(), "Sync Successfully", Toast.LENGTH_SHORT).show();
+
+                                    JSONArray array = object.optJSONArray("data");
+                                    if (array != null && array.length() > 0) {
+                                        schemeSearches.clear();
+
+                                        for (int i = 0; i < array.length(); i++) {
+                                            SchemeHHSearch scheme = SchemeHHSearch.parseSchemeSearch(array.optJSONObject(i), userType,"hh");
+                                            if (scheme.isActive) {
+                                                schemeHHSearches.add(scheme);
+                                            }
+                                        }
+
+                                        realm.executeTransaction(new Realm.Transaction() {
+                                            @Override
+                                            public void execute(@NotNull Realm realm1) {
+                                                realm1.delete(SchemeHHSearch.class);
+                                                realm1.delete(ActivityHHSearch.class);
+                                                realm1.delete(HHSHGList.class);
+                                                realm1.delete(HhList.class);
+                                                realm1.insertOrUpdate(schemeHHSearches);
+                                            }
+                                        });
+                                    }
+                                }
+
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+//                        progressDialogue.hide();
+//                        binding.progressCircular.setVisibility(View.GONE);
+                        Log.e(TAG, "onError: " + anError.getErrorDetail());
+                        try {
+                            JSONObject errObj = new JSONObject(anError.getErrorBody());
+                            int statusCode = errObj.optInt("status");
+                            if (statusCode == 500) {
+                                sp.clear();
+                                Intent intent = new Intent(getActivity(), MainActivity.class);
+                                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                                        Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+                                getActivity().finish();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+    }
+
+    /**
      * @method to get SHG List data for KM activities
      */
     private void getFarmingShgListData() {
-        binding.progressCircular.setVisibility(View.VISIBLE);
+//        binding.progressCircular.setVisibility(View.VISIBLE);
         AndroidNetworking.get(BuildConfig.BASE_URL + Constant.API_PATH + "farming/offline/search/shg")
                 .addHeaders("Authorization", "Bearer " + token)
                 .setTag("FarmingShgList")
@@ -499,7 +500,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                 .getAsString(new StringRequestListener() {
                     @Override
                     public void onResponse(String response) {
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         if (Utility.isStringValid(response)) {
 
                             isShgListLoading = true;
@@ -523,7 +524,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
 
                                         realm.executeTransaction(new Realm.Transaction() {
                                             @Override
-                                            public void execute(Realm realm1) {
+                                            public void execute(@NotNull Realm realm1) {
                                                 realm1.delete(SchemeSHGSearch.class);
                                                 realm1.delete(ActivitySHGSearch.class);
                                                 realm1.delete(ShgList.class);
@@ -544,7 +545,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                     @Override
                     public void onError(ANError anError) {
 //                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         Log.e(TAG, "onError: " + anError.getErrorDetail());
                         try {
                             JSONObject errObj = new JSONObject(anError.getErrorBody());
@@ -599,7 +600,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
 
                                         realm.executeTransaction(new Realm.Transaction() {
                                             @Override
-                                            public void execute(Realm realm1) {
+                                            public void execute(@NotNull Realm realm1) {
                                                 realm1.delete(Schemes.class);
                                                 realm1.delete(ActivityType.class);
                                                 realm1.delete(Activity.class);
@@ -735,7 +736,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
     private void getShgListData() {
 
         ArrayList<Schemes> schemesArrayList = new ArrayList<>();
-        binding.progressCircular.setVisibility(View.VISIBLE);
+//        binding.progressCircular.setVisibility(View.VISIBLE);
         AndroidNetworking.get(BuildConfig.BASE_URL + Constant.API_PATH + "livestock/offline/search/shg")
                 .addHeaders("Authorization", "Bearer " + token)
                 .setTag("Schemes")
@@ -745,7 +746,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                     @Override
                     public void onResponse(String response) {
 //                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         if (Utility.isStringValid(response)) {
 
                             isShgList = true;
@@ -822,7 +823,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                     @Override
                     public void onError(ANError anError) {
 //                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         Log.e(TAG, "onError: " + anError.getErrorDetail());
                         try {
                             JSONObject errObj = new JSONObject(anError.getErrorBody());
@@ -849,7 +850,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
     private void getHhListData() {
 
         ArrayList<Schemes> schemesArrayList = new ArrayList<>();
-        binding.progressCircular.setVisibility(View.VISIBLE);
+//        binding.progressCircular.setVisibility(View.VISIBLE);
         AndroidNetworking.get(BuildConfig.BASE_URL + Constant.API_PATH + "livestock/offline/search/hh")
                 .addHeaders("Authorization", "Bearer " + token)
                 .setTag("Schemes")
@@ -859,7 +860,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                     @Override
                     public void onResponse(String response) {
 //                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         if (Utility.isStringValid(response)) {
                             isHhLst = true;
                             try {
@@ -930,7 +931,7 @@ public class ProfilingFragment extends Fragment implements ProfilingAdapter.Prof
                     @Override
                     public void onError(ANError anError) {
 //                        progressDialogue.hide();
-                        binding.progressCircular.setVisibility(View.GONE);
+//                        binding.progressCircular.setVisibility(View.GONE);
                         Log.e(TAG, "onError: " + anError.getErrorDetail());
                         try {
                             JSONObject errObj = new JSONObject(anError.getErrorBody());
