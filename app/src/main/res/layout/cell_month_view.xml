@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_16"
+    android:layout_marginEnd="@dimen/space_8"
+    android:layout_marginTop="@dimen/space_8"
+    android:layout_marginBottom="@dimen/space_8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/space_16">
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="80dp">
+    <views.PoppinsMedium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JAN"
+        android:id="@+id/cell_month"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_16"
+        android:textSize="18sp"/>
+    <views.PoppinsMedium
+        android:layout_below="@+id/cell_month"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020"
+        android:id="@+id/cell_year"
+        android:textColor="#D2D2D2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_8"
+        android:textSize="14sp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

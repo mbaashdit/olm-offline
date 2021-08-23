@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MonthlyViewActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_monthly_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/space_0">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_monthly_view"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="@dimen/space_0"
+            app:contentInsetStart="@dimen/space_0">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <views.MonBold
+                    android:id="@+id/tv_toolbar_title_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Goatry Cluster Details"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+                <views.MonRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/spn_year_list"
+                    android:text="Year" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spn_year_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:entries="@array/years" />
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar_monthly_view"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginEnd="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_8">
+
+        <views.PoppinsSemiBold
+            android:id="@+id/tv_start_date_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starting Date: " />
+
+        <views.PoppinsSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tv_start_date_lbl"
+            android:textColor="#717c9a"
+            android:text="20,Jan 2020" />
+
+        <views.PoppinsSemiBold
+            android:id="@+id/tv_base_cap_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/tv_base_cap"
+            android:text="Base Capital: " />
+
+        <views.PoppinsSemiBold
+            android:textColor="#717c9a"
+            android:id="@+id/tv_base_cap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Rs. 1,25,574" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_shg_members"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header" />
+
+
+</RelativeLayout>

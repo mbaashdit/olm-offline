@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/space_8"
+    android:layout_marginStart="@dimen/space_4"
+    android:layout_marginEnd="@dimen/space_4"
+    android:layout_marginTop="@dimen/space_4"
+    android:layout_marginBottom="@dimen/space_4"
+    app:cardElevation="@dimen/space_8">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_profiling_item_bg"
+            app:cardCornerRadius="@dimen/space_4"
+            app:cardElevation="@dimen/space_0"
+            android:layout_margin="@dimen/space_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <views.MonBold
+                android:id="@+id/tv_character"
+                android:padding="@dimen/space_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <views.MonBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BLM"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/cell_tv_name"/>
+
+        <views.MonRegular
+            android:visibility="gone"
+            android:layout_below="@+id/cell_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Total BLF"
+            android:textSize="18sp"
+            android:layout_marginEnd="@dimen/space_16"
+            android:layout_marginTop="@dimen/space_32"
+            android:id="@+id/cell_tv_total_lbl"/>
+
+
+        <views.MonBold
+            android:visibility="gone"
+            android:layout_below="@+id/cell_tv_total_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="12,5,425,42"
+            android:textColor="#B50003"
+            android:textSize="20sp"
+            android:layout_marginEnd="@dimen/space_16"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_16"
+            android:id="@+id/cell_tv_total"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

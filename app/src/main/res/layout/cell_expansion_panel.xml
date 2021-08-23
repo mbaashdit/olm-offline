@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_nav_menu_header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Trip name"
+            android:textColor="#3E3E3E"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_menu_logo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_activity" />
+
+        <TextView
+            android:id="@+id/tv_menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_16"
+            android:layout_toEndOf="@+id/iv_menu_logo"
+            android:text="Carribean cruise"
+            android:textSize="16sp"
+            android:textColor="#AAA" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/headerIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_nav_menu_header"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:padding="@dimen/space_8"
+            android:id="@+id/tv_sub_menu_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_60"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_16"
+            android:layout_marginBottom="@dimen/space_4"
+            android:gravity="start"
+            android:text="@string/new_registration" />
+
+        <TextView
+            android:padding="@dimen/space_8"
+            android:id="@+id/tv_sub_menu_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_60"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_16"
+            android:layout_marginBottom="@dimen/space_4"
+            android:gravity="start"
+            android:text="@string/overview" />
+
+        <TextView
+            android:padding="@dimen/space_8"
+            android:id="@+id/tv_sub_menu_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_60"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_16"
+            android:layout_marginBottom="@dimen/space_4"
+            android:gravity="start"
+            android:text="@string/approvals" />
+
+    </LinearLayout>
+
+</RelativeLayout>

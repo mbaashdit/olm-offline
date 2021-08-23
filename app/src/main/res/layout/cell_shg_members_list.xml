@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/space_8"
+    android:layout_marginStart="@dimen/space_4"
+    android:layout_marginEnd="@dimen/space_4"
+    android:layout_marginTop="@dimen/space_4"
+    android:layout_marginBottom="@dimen/space_4"
+    app:cardElevation="@dimen/space_8">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <views.MonBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:textSize="18sp"
+            android:padding="@dimen/space_16"
+            android:layout_margin="@dimen/space_16"
+            android:id="@+id/cell_tv_lbl"
+            android:background="@drawable/cell_txt_bg"/>
+
+
+        <views.MonBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/cell_tv_lbl"
+            android:text="SHG Member Name 1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginEnd="@dimen/space_16"
+            android:layout_marginTop="@dimen/space_16"
+            android:id="@+id/cell_tv_shg_member_name"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+        <views.MonRegular
+            android:layout_below="@+id/cell_tv_shg_member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID1445GTH"
+            android:layout_marginTop="@dimen/space_8"
+            android:textColor="#4F58595B"
+            android:layout_toEndOf="@+id/cell_tv_lbl"
+            android:textSize="14sp"
+            android:id="@+id/cell_tv_shg_member_id"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

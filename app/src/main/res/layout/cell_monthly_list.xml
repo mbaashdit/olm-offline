@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_8"
+    android:layout_marginTop="@dimen/space_4"
+    android:layout_marginEnd="@dimen/space_8"
+    android:layout_marginBottom="@dimen/space_4"
+    app:cardCornerRadius="@dimen/space_8"
+    app:cardElevation="@dimen/space_8">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_letter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/space_8"
+            app:cardCornerRadius="@dimen/space_8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/cell_iv_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/up_arrow"
+                    android:layout_toStartOf="@+id/tv_percent_letter" />
+
+                <views.MonBold
+                    android:id="@+id/tv_percent_letter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="40"
+                    android:textSize="16sp" />
+
+                <views.MonRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tv_percent_letter"
+                    android:text="%" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <views.PoppinsMedium
+            android:id="@+id/cell_tv_activity_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_8"
+            android:layout_toStartOf="@+id/cell_tv_amount"
+            android:layout_toEndOf="@+id/cv_letter"
+            android:maxLines="2"
+            android:text="Schemes Name No 1"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cell_tv_activity_name"
+            android:layout_marginStart="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_8"
+            android:layout_toStartOf="@+id/cell_tv_amount"
+            android:layout_toEndOf="@+id/cv_letter"
+            android:orientation="horizontal">
+
+            <views.PoppinsMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goat : " />
+
+            <views.PoppinsSemiBold
+                android:id="@+id/cell_tv_goat_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250"
+                android:textColor="#58595B" />
+
+            <views.PoppinsMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:text="Buck : " />
+
+            <views.PoppinsSemiBold
+                android:id="@+id/cell_tv_buck_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250"
+                android:textColor="#58595B" />
+
+        </LinearLayout>
+
+
+        <views.MonRegular
+            android:id="@+id/cell_tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/space_16"
+            android:text="Rs. 25,688"
+            android:textColor="#EB557B"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

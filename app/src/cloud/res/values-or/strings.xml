@@ -1,0 +1,522 @@
+<resources>
+    <string name="app_name">OLM</string>
+
+    <!-- activity_management_fragment -->
+    <string name="shg">SHG</string>
+    <string name="cluster">କ୍ଲଷ୍ଟର</string>
+    <string name="household">ସଦସ୍ୟ</string>
+
+    <string name="add_member_activity">Add Member Activity</string>
+    <!-- LoginActivity -->
+    <string name="login_user_name">ଉପଯୋଗକର୍ତ୍ତା ନାମ</string>
+    <string name="login_password">ପାସୱାର୍ଡ</string>
+    <string name="login_forget_password">ପାସୱାର୍ଡ ଭୁଲିଗଲେ କି?</string>
+    <string name="login_signin">ଲଗଇନ</string>
+    <string name="logout">Logout</string>
+
+    <!-- UpdateShgActivity -->
+    <string name="update_success">ସଫଳତାର ସହିତ ଅପଡେଟ୍ ହୋଇଛି </string>
+    <string name="update_activity_lbl">କାର୍ଯ୍ୟକଳାପ ଅପଡେଟ୍ </string>
+
+    <!-- DetailViewActivity -->
+    <string name="detail_view_no_of_goat_sold">ଛେଳି ବିକ୍ରିର ସଂଖ୍ୟା :</string>
+    <string name="detail_view_no_of_buck_sold">ଛେଳି ପିଲା ବିକ୍ରୟ  ସଂଖ୍ୟା :</string>
+    <string name="detail_view_income_generated">ସମୁଦାୟ ଆୟ ସୃଷ୍ଟି :</string>
+    <string name="detail_view_no_of_goat_buy">ଛେଳି କିଣିବାର ସଂଖ୍ୟା :</string>
+    <string name="detail_view_no_of_buck_buy">ଛେଳି ପିଲା କିଣିବାର ସଂଖ୍ୟା :</string>
+    <string name="detail_view_expenditure_cost">ନିବେଶ ମୂଲ୍ୟ :</string>
+    <string name="detail_view_no_of_goat_born">ଛେଳି ଜନ୍ମ ସଂଖ୍ୟା :</string>
+    <string name="detail_view_no_of_buck_born">ଛେଳି ପିଲା ଜନ୍ମ  ସଂଖ୍ୟା :</string>
+    <string name="detail_view_no_of_goat_dead">ଛେଳି ମୃତ  ସଂଖ୍ୟା :</string>
+    <string name="detail_view_no_of_buck_dead">ଛେଳି ପିଲା ମୃତ  ସଂଖ୍ୟା :</string>
+    <string name="detail_view_no_of_goat_vaccinated">ଛେଳି ଟୀକାକରଣର ସଂଖ୍ୟା :</string>
+    <string name="detail_view_no_of_buck_vaccinated">ଛେଳି ପିଲା ଟୀକାକରଣର ସଂଖ୍ୟା :</string>
+    <string name="detail_view_goat_activity">ଛେଳି କାର୍ଯ୍ୟକଳାପ</string>
+    <string name="detail_view_buck_activity">ଛେଳି ପିଲା କାର୍ଯ୍ୟକଳାପ</string>
+
+
+    <!-- fragment activity -->
+    <string name="total">ସମୁଦାୟ : </string>
+
+
+
+    <string name="profile">ପ୍ରୋଫାଇଲ୍</string>
+    <string name="home">ହୋମ୍</string>
+    <string name="remark">ଟିପ୍ପଣୀ</string>
+    <string name="update">ଅପଡେଟ୍ </string>
+    <string name="select_month">ମାସ ଚୟନ କରନ</string>
+    <string name="regular_vaccination">ନିୟମିତ ଟୀକାକରଣ ଏବଂ କୀଟନାଶକ </string>
+
+    <string name="Rs">\u20B9</string>
+    <string name="add_shg_activity">SHG କାର୍ଯ୍ୟକଳାପ ଯୋଡନ୍ତୁ</string>
+    <string name="add_hh_activity">ଗୃହଧାରୀଙ୍କ କାର୍ଯ୍ୟକଳାପ ଯୋଡନ୍ତୁ</string>
+    <string name="add_clf_activity">CLF କାର୍ଯ୍ୟକଳାପ ଯୋଡନ୍ତୁ</string>
+    <string name="select_shg">SHG ଚୟନ </string>
+    <string name="select_shg_regd">SHG ଚୟନ <font fgcolor="#FF0000">*</font></string>
+    <string name="no_of_households">ଗୃହଧାରୀଙ୍କ ସଂଖ୍ୟା</string>
+    <string name="no_of_households_shg_regd">ଗୃହଧାରୀଙ୍କ ସଂଖ୍ୟା <font fgcolor="#FF0000">*</font></string>
+    <string name="no_of_goat">ଛେଳିର  ସଂଖ୍ୟା</string>
+    <string name="no_of_buck">ଛେଳି ପିଲା ସଂଖ୍ୟା </string>
+    <string name="type_of_goat_shed">ଛେଳି ଚାଳିଆର ପ୍ରକାର </string>
+    <string name="base_capital_inr">ମୂଳଧନ</string>
+    <string name="base_capital_inr_regd">ମୂଳଧନ <font fgcolor="#FF0000">*</font></string>
+    <string name="commencement_date">ଆରମ୍ଭ ତାରିଖ</string>
+    <string name="commencement_date_regd">ଆରମ୍ଭ ତାରିଖ <font fgcolor="#FF0000">*</font></string>
+    <string name="submit">ଦାଖଲ</string>
+
+    <string name="regular_vaccination_and_deworming">ନିୟମିତ ଟୀକାକରଣ ଏବଂ କୀଟନାଶକ</string>
+    <string name="income_in">ଆୟ </string>
+    <string name="avg_monthly_income_all_members">ହାରାହାରି ମାସିକ ଆୟ (ସମସ୍ତ ସଦସ୍ୟ)</string>
+    <string name="avg_monthly_income_shg">ହାରାହାରି ମାସିକ ଆୟ (SHG)</string>
+    <string name="avg_monthly_income">ହାରାହାରି ମାସିକ ଆୟ </string>
+
+    <string name="new_update">ନୂଆ ଅପଡେଟ୍</string>
+    <string name="history">ଇତିହାସ</string>
+    <string name="year">ବର୍ଷ </string>
+
+
+
+    <string name="profiling">ପ୍ରୋଫାଇଲିଂ</string>
+    <string name="activity">କାର୍ଯ୍ୟକଳାପ</string>
+    <string name="training">ତାଲିମ</string>
+    <string name="financial">ଆର୍ଥିକ</string>
+    <string name="attendance">ଉପସ୍ଥାନ</string>
+
+    <string name="activity_management">କାର୍ଯ୍ୟକଳାପ ପରିଚାଳନା</string>
+    <string name="financial_management">ଆର୍ଥିକ ପରିଚାଳନା</string>
+    <string name="search">ସନ୍ଧାନ</string>
+    <string name="coming_soon">ଶୀଘ୍ର ଆସୁଅଛି</string>
+
+    <string name="no">ନା</string>
+    <string name="internal">ଆଭ୍ୟନ୍ତରୀଣ </string>
+    <string name="external">ବାହ୍ୟ </string>
+    <string name="name_of_book_keeper">ବୁକ୍ ରକ୍ଷକଙ୍କ ନାମ </string>
+    <string name="save">ସେଭ୍</string>
+
+    <string name="disability">ଅକ୍ଷମତା<font fgcolor="#FF0000">*</font></string>
+    <string name="religion">ଧର୍ମ<font fgcolor="#FF0000">*</font></string>
+    <string name="gender">ଲିଙ୍ଗ<font fgcolor="#FF0000">*</font></string>
+    <string name="pip_category">ଗରିବଙ୍କ ଅଂଶଗ୍ରହଣକାରୀ ପରିଚୟ ବର୍ଗ <font fgcolor="#FF0000">*</font></string>
+    <string name="leader">ନେତା <font fgcolor="#FF0000">*</font></string>
+    <string name="no_of_birds">ପକ୍ଷୀ ସଂଖ୍ୟା</string>
+    <string name="select_cluster_name">କ୍ଲଷ୍ଟର ନାମ ଚୟନ</string>
+    <string name="select_house_holds">ଗୃହଧାରୀ ଚୟନ </string>
+    <string name="no_of_bird_sold">ବିକ୍ରି ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_bird_buy">କିଣା ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_bird_born">ଜନ୍ମ ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_bird_dead">ମୃତ ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_bird_vaccinated">ଟୀକାକରଣ ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_birds_sold">ବିକ୍ରି ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="bird_activity">ପକ୍ଷୀ କାର୍ଯ୍ୟକଳାପ</string>
+    <string name="no_of_birds_bought">କିଣା ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_birds_born">ଜନ୍ମ ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_birds_dead">ମୃତ ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="view_previous_month_details">ପୂର୍ବ ମାସ ବିବରଣୀ ଦେଖନ୍ତୁ</string>
+    <string name="no_of_birds_lbl">ପକ୍ଷୀ ସଂଖ୍ୟା :</string>
+    <string name="type_of_birds_shed">ପକ୍ଷୀ ଚାଳିଆର ପ୍ରକାର </string>
+    <string name="groups">ଗୋଷ୍ଠୀ</string>
+    <string name="individual">ସମସ୍ତ ସଦସ୍ୟ</string>
+    <string name="_0">0</string>
+    <string name="n_a">N/A</string>
+    <string name="new_registration">ନୂତନ ପଞ୍ଜୀକରଣ</string>
+    <string name="overview">ସମୀକ୍ଷା</string>
+    <string name="approvals">ଅନୁମୋଦନ</string>
+    <string name="month">ମାସ</string>
+    <string name="scheme">ଯୋଜନା</string>
+    <string name="pending">ବିଚାରାଧୀନ</string>
+    <string name="approved">ଅନୁମୋଦିତ</string>
+    <string name="reverted">ଫେରସ୍ତ</string>
+    <string name="crpcm_pending_details">ବିଚାରାଧୀନ ବିବରଣୀ</string>
+
+
+    <string name="scheme_lbl">ଯୋଜନା ଚୟନ କରନ୍ତୁ<font fgcolor="#FF0000">*</font></string>
+    <string name="activity_lbl">କାର୍ଯ୍ୟକଳାପ ଚୟନ କରନ୍ତୁ <font fgcolor="#FF0000">*</font></string>
+    <string name="reporting_lbl">ରିପୋର୍ଟ ସ୍ତର</string>
+    <string name="select_type">ପ୍ରକାର ଚୟନ କରନ୍ତୁ<font fgcolor="#FF0000">*</font></string>
+
+    <string name="location_information">ଅବସ୍ଥାନ ସୂଚନା</string>
+    <string name="select_district">ଜିଲ୍ଲା ଚୟନ କର<font fgcolor="#FF0000">*</font></string>
+    <string name="select_block">ବ୍ଲକ ଚୟନ କର<font fgcolor="#FF0000">*</font></string>
+    <string name="select_grampanchayat">ଗ୍ରାମପଞ୍ଚାୟତ ଚୟନ କର<font fgcolor="#FF0000">*</font></string>
+    <string name="select_village">ଗ୍ରାମ ଚୟନ କର<font fgcolor="#FF0000">*</font></string>
+    <string name="shg_information">SHG ସୂଚନା</string>
+    <string name="shg_name">SHG ନାମ*</string>
+    <string name="date_of_formation">ଗଠନ ତାରିଖ<font fgcolor="#FF0000">*</font></string>
+    <string name="shg_code">SHG କୋଡ୍<font fgcolor="#FF0000">*</font></string>
+    <string name="shg_regd">SHG ପଞ୍ଜୀକରଣ<font fgcolor="#FF0000">*</font></string>
+    <string name="shg_type">SHG ଶ୍ରେଣୀ<font fgcolor="#FF0000">*</font></string>
+    <string name="date_of_cooption_revival_into_nrlm">ସହଯୋଗର ତାରିଖ/NRLM ରେ ପୁନର୍ଜୀବନ<font fgcolor="#FF0000">*</font></string>
+    <string name="promoted_by">ପ୍ରୋତ୍ସାହକ<font fgcolor="#FF0000">*</font></string>
+    <string name="account_details">ଖାତା ବିବରଣୀ</string>
+    <string name="bank">ବ୍ୟାଙ୍କ<font fgcolor="#FF0000">*</font></string>
+    <string name="bank_branch">ବ୍ୟାଙ୍କ ଶାଖା<font fgcolor="#FF0000">*</font></string>
+    <string name="sb_a_c_number">SB A/c ସଂଖ୍ୟା<font fgcolor="#FF0000">*</font></string>
+    <string name="date_of_account_opening">ଖାତା ଖୋଲିବାର ତାରିଖ<font fgcolor="#FF0000">*</font></string>
+    <string name="meeting_frequency">ମିଟିଂ ଫ୍ରିକ୍ୱେନ୍ସି<font fgcolor="#FF0000">*</font></string>
+    <string name="monthly_amount_of_saving_per_member">ପ୍ରତି ସଦସ୍ୟଙ୍କ ସଞ୍ଚୟର ମାସିକ ପରିମାଣ<font fgcolor="#FF0000">*</font></string>
+    <string name="basic_training_received">Basic ତାଲିମ ପ୍ରାପ୍ତ</string>
+    <string name="active_bank_loan_a_c_number">ସକ୍ରିୟ ବ୍ୟାଙ୍କ ଋଣ A / C ନମ୍ବର<font fgcolor="#FF0000">*</font></string>
+    <string name="amount_of_capital_subsidy_grant_received_prior_to_nrlm">କ୍ୟାପିଟାଲ୍ ସବସିଡିର ପରିମାଣ /NRLM ପୂର୍ବରୁ ଅନୁଦାନ ପ୍ରାପ୍ତ :<font fgcolor="#FF0000">*</font></string>
+    <string name="have_trained_book_keeper">ବୁକ୍ ରକ୍ଷକଙ୍କୁ ତାଲିମ ଦେଇଛନ୍ତି ?<font fgcolor="#FF0000">*</font></string>
+    <string name="create_shg_profile">SHG ପ୍ରୋଫାଇଲ୍ ସୃଷ୍ଟି କର</string>
+    <string name="update_shg_profile">ଅପଡେଟ୍ SHG ପ୍ରୋଫାଇଲ୍</string>
+
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="add_a_member">ସଦସ୍ୟ ସୃଷ୍ଟି କର</string>
+    <string name="member_name">ସଦସ୍ୟ ନାମ*</string>
+    <string name="father_husband_name">ପିତା / ସ୍ୱାମୀ ନାମ*</string>
+    <string name="social_category">ସାମାଜିକ ବର୍ଗ<font fgcolor="#FF0000">*</font> </string>
+    <string name="date_of_birth">ଜନ୍ମଦିନ<font fgcolor="#FF0000">*</font></string>
+    <string name="date_of_joining_in_shg">SHG ରେ ଯୋଗଦାନର ତାରିଖ*</string>
+    <string name="education_level">ଶିକ୍ଷା ସ୍ତର*</string>
+    <string name="a_c_no">A/c ନମ୍ବର*</string>
+    <string name="enrolled_in_insurance_pmjjy">ବୀମା ରେ ନାମ ଲେଖାଯାଇଛି (PMJJY)</string>
+    <string name="enrolled_in_insurance_pmsby">ବୀମା ରେ ନାମ ଲେଖାଯାଇଛି (PMSBY)</string>
+    <string name="enrolled_in_insurance_others">ବୀମା ରେ ନାମ ଲେଖାଯାଇଛି (Others)</string>
+    <string name="enrolled_in_insurance_apy">ବୀମା ରେ ନାମ ଲେଖାଯାଇଛି (APY)</string>
+    <string name="aadhar_number">ଆଧାର ନମ୍ବର*</string>
+    <string name="mobile_no">ମୋବାଇଲ୍ ନମ୍ବର*</string>
+    <string name="aadhar_seeded_sb_a_c">ଆଧାର ବିହନ SB A/C </string>
+
+    <string name="shg_member">SHG ସଦସ୍ୟ</string>
+    <string name="shg_list">SHG ତାଲିକା</string>
+    <string name="next">ନେକ୍ସଟ</string>
+    <!--    <string name="next">ପରବର୍ତ୍ତୀ</string>-->
+    <string name="send_for_approval">ଅନୁମୋଦନ ପାଇଁ ପଠାନ୍ତୁ</string>
+    <string name="update_member">ଅପଡେଟ୍ ସଦସ୍ୟ</string>
+    <string name="status">ସ୍ଥିତି :</string>
+
+    <string name="goats">ଛେଳି : </string>
+    <string name="bucks">ଛେଳି ପିଲା : </string>
+    <string name="birds">ପକ୍ଷୀ : </string>
+
+    <string name="pending_">"ବିଚାରାଧୀନ  "</string>
+
+
+    <string name="select_house_hold_regd">ସଦସ୍ୟ ଚୟନ କରନ୍ତୁ <font fgcolor="#FF0000">*</font></string>
+    <string name="number_of_ponds_owned_regd">ମାଲିକାନା ପୋଖରୀ ସଂଖ୍ୟା <font fgcolor="#FF0000">*</font></string>
+    <string name="number_of_ponds_owned">ପୋଖରୀ ସଂଖ୍ୟା </string>
+    <!-- psiciculture -->
+    <string name="fingerlings_harvested_kg">ଯାଆଁଳ ଅମଳ (Kg)<font fgcolor="#FF0000">*</font> :</string>
+    <string name="table_size_fish_harvested_kg">ଟେବୁଲ୍ ଆକାର ମାଛ ଅମଳ ହୋଇଛି (Kg)<font fgcolor="#FF0000">*</font> :</string>
+    <string name="fingerlings_sold_kg">ଯାଆଁଳ ବିକ୍ରି (Kg)<font fgcolor="#FF0000">*</font> :</string>
+    <string name="table_size_fish_sold_kg">ଟେବୁଲ୍ ଆକାର ମାଛ ବିକ୍ରି (Kg)<font fgcolor="#FF0000">*</font> :</string>
+    <string name="total_no_of_fry_stocked">ସମୁଦାୟ ଫ୍ରାଏ ଷ୍ଟକ୍ ହୋଇଛି :</string>
+    <string name="total_no_of_fingerlings_stocked">ସମୁଦାୟ ଯାଆଁଳ ଷ୍ଟକ୍ ହୋଇଛି :</string>
+    <string name="total_no_of_yearlings_stocked">ସମୁଦାୟ ବାର୍ଷିକ ମାଛ ଷ୍ଟକ୍ ହୋଇଛି :</string>
+    <string name="yearly_pond_cleaning_frequency">ବାର୍ଷିକ ପୋଖରୀ ସଫା କରିବା ଆବୃତ୍ତି </string>
+    <string name="feeding_qty_for">ଖାଇବା ପରିମାଣ:</string>
+    <string name="fry_kg">ଫ୍ରାଏ (kg)</string>
+    <string name="fingerlings_kg">ଯାଆଁଳ (kg)</string>
+    <string name="yearlings_kg">ବାର୍ଷିକ ମାଛ (kg)</string>
+    <string name="netting_management">ଜାଲ ପରିଚାଳନା</string>
+    <string name="netting_frequency">ନେଟ ଫ୍ରିକ୍ୱେନ୍ସି </string>
+    <string name="pond_cleaning_frequency">ପୋଖରୀ ସଫା କରିବା ଫ୍ରିକ୍ୱେନ୍ସି </string>
+    <string name="yearly_pond_cleaning_frequency_regd">ବାର୍ଷିକ ପୋଖରୀ ସଫା କରିବା ଫ୍ରିକ୍ୱେନ୍ସି <font fgcolor="#FF0000">*</font></string>
+    <string name="no_of_ponds_leased">ଲିଜ୍ ଉପରେ ପୋଖରୀ ସଂଖ୍ୟା </string>
+    <string name="total_area_of_pond_hectares">ପୋଖରୀର ସମୁଦାୟ କ୍ଷେତ୍ର (Hectares)</string>
+    <string name="total_qty_of_fry_applied">ସମୁଦାୟ ଫ୍ରାଏ ପରିମାଣ ପ୍ରୟୋଗ ହୋଇଛି </string>
+    <string name="total_qty_of_fingerlings_applied">ସମୁଦାୟ ଯାଆଁଳ ପରିମାଣ ପ୍ରୟୋଗ ହୋଇଛି </string>
+    <string name="total_qty_of_yearling_applied">ସମୁଦାୟ ବାର୍ଷିକ ମାଛ ପରିମାଣ ପ୍ରୟୋଗ ହୋଇଛି </string>
+
+    <string name="total_no_of_fry_stocked_regd">ସମୁଦାୟ ଫ୍ରାଏ ଷ୍ଟକ୍ ହୋଇଛି <font fgcolor="#FF0000">*</font> :</string>
+    <string name="total_no_of_fingerlings_stocked_regd">ସମୁଦାୟ ଯାଆଁଳ ଷ୍ଟକ୍ ହୋଇଛି <font fgcolor="#FF0000">*</font> :</string>
+    <string name="total_no_of_yearlings_stocked_regd">ସମୁଦାୟ ବାର୍ଷିକ ମାଛ ଷ୍ଟକ୍ ହୋଇଛି <font fgcolor="#FF0000">*</font> :</string>
+    <string name="qty_of_fry_regd">ଫ୍ରାଏ ପରିମାଣ <font fgcolor="#FF0000">*</font></string>
+
+    <string name="fingerlings">ଯାଆଁଳ : </string>
+    <string name="table_size_fish">ଟେବୁଲ୍ ଆକାର ର ମାଛ : </string>
+    <string name="number_of_members">ସଦସ୍ୟଙ୍କ ସଂଖ୍ୟା </string>
+    <string name="monthly_frequency">ମାସିକ ଫ୍ରିକ୍ୱେନ୍ସି </string>
+    <string name="regular_deworming">ନିୟମିତ କୀଟନାଶକ </string>
+
+
+    <string name="qty_of_fingerlings">ଯାଆଁଳ ର ପରିମାଣ</string>
+    <string name="qty_of_fingerlings_regd">ଯାଆଁଳ ର ପରିମାଣ <font fgcolor="#FF0000">*</font></string>
+    <string name="qty_of_yearling">ବାର୍ଷିକ ମାଛ ର ପରିମାଣ </string>
+    <string name="qty_of_yearling_regd">ବାର୍ଷିକ ମାଛ ର ପରିମାଣ <font fgcolor="#FF0000">*</font></string>
+    <string name="regular_netting">ନିୟମିତ ଜାଲ</string>
+    <string name="feed_management">ଖାଇବା ପରିଚାଳନା</string>
+
+    <string name="number_of_ponds_leased">ଲିଜ୍ ହୋଇଥିବା ପୋଖରୀ ସଂଖ୍ୟା </string>
+    <string name="number_of_ponds_leased_regd">ଲିଜ୍ ହୋଇଥିବା ପୋଖରୀ ସଂଖ୍ୟା <font fgcolor="#FF0000">*</font></string>
+    <string name="pond_area_in_hectares">ପୋଖରୀ କ୍ଷେତ୍ର in Hectares</string>
+    <string name="pond_area_in_hectares_regd">ପୋଖରୀ କ୍ଷେତ୍ର in Hectares <font fgcolor="#FF0000">*</font></string>
+    <string name="qty_of_fry">ଫ୍ରାଏ ର ପରିମାଣ </string>
+    <string name="cows">Cows/Buffaloes : </string>
+    <string name="calves">Calves : </string>
+    <string name="bucks_tied">ବାଲ ବନ୍ଧା ?</string>
+
+    <!-- fishery -->
+    <string name="total_harvested_fingerlings">ସମୁଦାୟ ଅମଳ ହୋଇଥିବା ଯାଆଁଳ </string>
+    <string name="total_harvested_table_size_fish">ସମୁଦାୟ ଅମଳ ହୋଇଥିବା ଟେବୁଲ୍ ଆକାର ର ମାଛ</string>
+    <string name="no_of_farmers">କୃଷକଙ୍କ ସଂଖ୍ୟା</string>
+    <string name="area_of_pond">ପୋଖରୀର କ୍ଷେତ୍ର</string>
+    <string name="feeding_management">ଖାଇବା ପରିଚାଳନା</string>
+    <string name="income_from_fingerling_sales">ଯାଆଁଳ ବିକ୍ରୟରୁ ଆୟ</string>
+    <string name="income_from_tab_size_fish_sales">ଟେବୁଲ୍ ଆକାର ବିକ୍ରୟରୁ ଆୟ</string>
+    <string name="details_view">ବିସ୍ତୃତ ବିବରଣୀ</string>
+    <string name="fingerlings_harvested_kg_view">ଅମଳ ହୋଇଥିବା ଯାଆଁଳ(kg) :</string>
+    <string name="table_size_fish_harvested_kg_view">ଅମଳ ହୋଇଥିବା ଟେବୁଲ୍ ଆକାର ମାଛ (Kg):</string>
+    <string name="fingerlings_sold_kg_view">ଯାଆଁଳ ବିକ୍ରି (Kg):</string>
+    <string name="table_size_fish_sold_kg_view">ଟେବୁଲ୍ ଆକାର ମାଛ ବିକ୍ରି (Kg) :</string>
+    <string name="total_no_of_fry_stocked_view">ସମୁଦାୟ ଫ୍ରାଏ ଷ୍ଟକ୍ ହୋଇଛି :</string>
+    <string name="total_no_of_fingerlings_stocked_view">ସମୁଦାୟ ଯାଆଁଳ ଷ୍ଟକ୍ ହୋଇଛି :</string>
+    <string name="total_no_of_yearlings_stocked_view">ସମୁଦାୟ ବାର୍ଷିକ ମାଛ ଷ୍ଟକ୍ ହୋଇଛି :</string>
+    <string name="frequency_view">ଫ୍ରିକ୍ୱେନ୍ସି</string>
+    <string name="total_no_of_fry_stocked_hh">ସମୁଦାୟ ଫ୍ରାଏ ଷ୍ଟକ୍ ହୋଇଛି</string>
+    <string name="total_no_of_fingerlings_stocked_hh">ସମୁଦାୟ ଯାଆଁଳ ଷ୍ଟକ୍ ହୋଇଛି</string>
+    <string name="total_no_of_yearlings_stocked_hh">ସମୁଦାୟ ବାର୍ଷିକ ମାଛ ଷ୍ଟକ୍ ହୋଇଛି</string>
+
+
+
+    <string name="no_of_cows_buffaloes">ଗାଇ/ମଇଁଷି ସଂଖ୍ୟା</string>
+    <string name="no_of_calves">ବାଛୁରୀ ସଂଖ୍ୟା</string>
+    <string name="type_of_cow_shed">ଗାଇଙ୍କ ଆଶ୍ରୟ ପ୍ରକାର</string>
+    <string name="select_member">ସଦସ୍ୟ ଚୟନ କରନ୍ତୁ</string>
+    <string name="total_no_of_cows_buffaloes">ମୋଟ ଗାଇ/ ମଇଁଷି ସଂଖ୍ୟା</string>
+    <string name="total_no_of_calves">ମୋଟ ବାଛୁରୀ ସଂଖ୍ୟା</string>
+    <string name="avg_daily_milk_production_ltrs">ହାରାହାରି ପ୍ରତିଦିନ କ୍ଷୀର ଉତ୍ପାଦନ (ltrs):</string>
+    <string name="avg_daily_milk_sales_ltrs">ହାରାହାରି ପ୍ରତିଦିନ କ୍ଷୀର ବିକ୍ରୟ (ltrs) :</string>
+    <string name="no_of_cows_buffaloes_sold">ବିକ୍ରି ହୋଇଥିବା ଗାଇ/ମଇଁଷି ସଂଖ୍ୟା :</string>
+    <string name="no_of_calves_sold">ବିକ୍ରି ହୋଇଥିବା ବାଛୁରୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_cows_buffaloes_bought">କିଣାଯାଇଥିବା ଗାଇ/ ମଇଁଷି ସଂଖ୍ୟା :</string>
+    <string name="no_of_calves_bought">କିଣାଯାଇଥିବା ବାଛୁରୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_calves_born">ଜନ୍ମ ହୋଇଥିବା ବାଛୁରୀ ସଂଖ୍ୟା :</string>
+    <string name="no_of_cows_buffaloes_dead">ମୃତ ଗାଇଙ୍କ / ମଇଁଷି ମାନଙ୍କ ସଂଖ୍ୟା :</string>
+    <string name="no_of_calves_dead">ମୃତ ବାଛୁରୀଙ୍କ ସଂଖ୍ୟା :</string>
+    <string name="qty_of_milk_produced_ltrs">ଉତ୍ପାଦିତ କ୍ଷୀରର ପରିମାଣ (ltrs)</string>
+    <string name="qty_of_milk_sold_ltrs">ଦୁଗ୍ଧ ବିକ୍ରିର ପରିମାଣ (ltrs)</string>
+    <string name="income_from_milk_sales">ଦୁଗ୍ଧ ବିକ୍ରୟରୁ ଆୟ</string>
+    <string name="regular_vaccination_dairy">ନିୟମିତ ଟୀକାକରଣ</string>
+    <string name="deworming">କୀଟନାଶକ</string>
+    <string name="no_of_egg_sold">ଅଣ୍ଡା ବିକ୍ରି ସଂଖ୍ୟା :</string>
+    <string name="income_from_bird_sales">ପକ୍ଷୀ ବିକ୍ରୟରୁ ଆୟ :</string>
+    <string name="income_from_egg_sales">ଅଣ୍ଡା ବିକ୍ରୟରୁ ଆୟ :</string>
+    <string name="change_language">ଭାଷା ପରିବର୍ତ୍ତନ କରନ୍ତୁ </string>
+    <string name="seasonal_income">Seasonal Income</string>
+
+    <string-array name="years">
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+    </string-array>
+
+
+    <string-array name="mood_array">
+        <item>Accepted</item>
+        <item>Accomplished</item>
+        <item>Aggravated</item>
+        <item>Alone</item>
+        <item>Amused</item>
+        <item>Angry</item>
+        <item>Annoyed</item>
+        <item>Anxious</item>
+        <item>Apathetic</item>
+        <item>Ashamed</item>
+        <item>Awake</item>
+        <item>Bewildered</item>
+        <item>Bitchy</item>
+        <item>Bittersweet</item>
+        <item>Blah</item>
+        <item>Blank</item>
+        <item>Blissful</item>
+        <item>Bored</item>
+        <item>Bouncy</item>
+        <item>Calm</item>
+        <item>Cheerful</item>
+        <item>Chipper</item>
+        <item>Cold</item>
+        <item>Complacent</item>
+        <item>Confused</item>
+        <item>Content</item>
+        <item>Cranky</item>
+        <item>Crappy</item>
+        <item>Crazy</item>
+        <item>Crushed</item>
+        <item>Curious</item>
+        <item>Cynical</item>
+        <item>Dark</item>
+        <item>Depressed</item>
+        <item>Determined</item>
+        <item>Devious</item>
+        <item>Dirty</item>
+        <item>Disappointed</item>
+        <item>Discontent</item>
+        <item>Ditzy</item>
+        <item>Dorky</item>
+        <item>Drained</item>
+        <item>Drunk</item>
+        <item>Ecstatic</item>
+        <item>Energetic</item>
+        <item>Enraged</item>
+        <item>Enthralled</item>
+        <item>Envious</item>
+        <item>Exanimate</item>
+        <item>Excited</item>
+        <item>Exhausted</item>
+        <item>Flirty</item>
+        <item>Frustrated</item>
+        <item>Full</item>
+        <item>Geeky</item>
+        <item>Giddy</item>
+        <item>Giggly</item>
+        <item>Gloomy</item>
+        <item>Good</item>
+        <item>Grateful</item>
+        <item>Groggy</item>
+        <item>Grumpy</item>
+        <item>Guilty</item>
+        <item>Happy</item>
+        <item>High</item>
+        <item>Hopeful</item>
+        <item>Hot</item>
+        <item>Hungry</item>
+        <item>Hyper</item>
+        <item>Impressed</item>
+        <item>Indescribable</item>
+        <item>Indifferent</item>
+        <item>Infuriated</item>
+        <item>Irate</item>
+        <item>Irritated</item>
+        <item>Jealous</item>
+        <item>Jubilant</item>
+        <item>Lazy</item>
+        <item>Lethargic</item>
+        <item>Listless</item>
+        <item>Lonely</item>
+        <item>Loved</item>
+        <item>Mad</item>
+        <item>Melancholy</item>
+        <item>Mellow</item>
+        <item>Mischievous</item>
+        <item>Moody</item>
+        <item>Morose</item>
+        <item>Naughty</item>
+        <item>Nerdy</item>
+        <item>NotSpecified</item>
+        <item>Numb</item>
+        <item>Okay</item>
+        <item>Optimistic</item>
+        <item>Peaceful</item>
+        <item>Pessimistic</item>
+        <item>Pissedoff</item>
+        <item>Pleased</item>
+        <item>Predatory</item>
+        <item>Quixotic</item>
+        <item>Recumbent</item>
+        <item>Refreshed</item>
+        <item>Rejected</item>
+        <item>Rejuvenated</item>
+        <item>Relaxed</item>
+        <item>Relieved</item>
+        <item>Restless</item>
+        <item>Rushed</item>
+        <item>Sad</item>
+        <item>Satisfied</item>
+        <item>Shocked</item>
+        <item>Sick</item>
+        <item>Silly</item>
+        <item>Sleepy</item>
+        <item>Smart</item>
+        <item>Stressed</item>
+        <item>Surprised</item>
+        <item>Sympathetic</item>
+        <item>Thankful</item>
+        <item>Tired</item>
+        <item>Touched</item>
+        <item>Uncomfortable</item>
+        <item>Weird</item>
+
+    </string-array>
+
+    <string name="type_to_search">ସନ୍ଧାନ କରିବାକୁ ଟାଇପ୍ କର </string>
+    <string name="farming_no_of_farmers">କୃଷକଙ୍କ ସଂଖ୍ୟା</string>
+    <string name="farming_seed_type">ବିହନ କିସମ</string>
+    <string name="farming_irrigation_source">ଜଳସେଚନ ଉତ୍ସ</string>
+    <string name="farming_select_unit_of_measurement_for_sales">ବିକ୍ରୟ ପାଇଁ ମାପର ଏକକ ଚୟନ କରନ୍ତୁ</string>
+    <string name="farming_select_unit_of_measurement_for_production">ଉତ୍ପାଦନ ପାଇଁ ମାପର ଏକକ ଚୟନ କରନ୍ତୁ</string>
+    <string name="farming_fund_source">ପାଣ୍ଠି ଉତ୍ସ</string>
+    <string name="farming_commencement_season">ଆରମ୍ଭ  ଋତୁ</string>
+    <string name="farming_update_member">କାର୍ଯ୍ୟକଳାପ ଅପଡେଟ୍ </string>
+    <string name="farming_all_members">ସମସ୍ତ ସଦସ୍ୟ</string>
+    <string name="farming_total_sales">ମୋଟ ବିକ୍ରୟ</string>
+    <string name="farming_total_production">ସମୁଦାୟ ଉତ୍ପାଦନ</string>
+    <string name="farming_item_sales">ଆଇଟମ୍ ବିକ୍ରୟ</string>
+    <string name="farming_quantity_sold">ବିକ୍ରୟ ପରିମାଣ</string>
+    <string name="farming_item_production">ଆଇଟମ୍ ଉତ୍ପାଦନ</string>
+    <string name="farming_quantity_produced">ଉତ୍ପାଦିତ ପରିମାଣ</string>
+    <string name="farming_total_input_cost">ମୋଟ ଇନପୁଟ୍ ମୂଲ୍ୟ</string>
+    <string name="farming_seasonal_income">ମୌସମୀ ଆୟ</string>
+    <string name="farming_total_gross_income">ବର୍ଷ ପାଇଁ ମୋଟ ଆୟ</string>
+    <string name="nf_select_village">ଗ୍ରାମ ଚୟନ କର</string>
+    <string name="nf_no_of_members">ସଦସ୍ୟ ସଂଖ୍ୟା</string>
+    <string name="nf_fund_source">ପାଣ୍ଠି ଉତ୍ସ</string>
+    <string name="nf_select_unit_of_measurement_for_sales">ବିକ୍ରୟ ପାଇଁ ମାପର ଏକକ ଚୟନ କରନ୍ତୁ</string>
+    <string name="nf_select_unit_of_measurement_for_production">ଉତ୍ପାଦନ ପାଇଁ ମାପର ଏକକ ଚୟନ କରନ୍ତୁ</string>
+    <string name="nf_select_entrepreneur">ଉଦ୍ୟୋଗୀ ଚୟନ କର</string>
+    <string name="nf_total_profit">ମୋଟ ଲାଭ</string>
+    <string name="nf_has_acquired_training">ପ୍ରଶିକ୍ଷଣ ହାସଲ କରିଛନ୍ତି କି?</string>
+    <string name="nf_total_sales_inr">ମୋଟ ବିକ୍ରୟ (INR)</string>
+    <string name="nf_total_input_cost_inr">ମୋଟ ଇନପୁଟ୍ ମୂଲ୍ୟ (INR)</string>
+    <string name="nf_total_profit_inr">ମୋଟ ଲାଭ (INR)</string>
+    <string name="nf_add_enp">ଉଦ୍ୟୋଗୀ କାର୍ଯ୍ୟକଳାପ ଯୋଡନ୍ତୁ</string>
+    <string name="nf_update_enp">ଉଦ୍ୟୋଗୀ କାର୍ଯ୍ୟକଳାପ ଅପଡେଟ୍</string>
+    <string name="nf_act_type">କାର୍ଯ୍ୟକଳାପ ପ୍ରକାର</string>
+    <string name="ntfp_select_village">ଗ୍ରାମ ଚୟନ କର</string>
+    <string name="ntfp_select_pg_name">PG ଚୟନ କର</string>
+    <string name="ntfp_no_of_members">ସଦସ୍ୟ ସଂଖ୍ୟା</string>
+    <string name="ntfp_fund_source">ପାଣ୍ଠି ଉତ୍ସ</string>
+    <string name="ntfp_select_unit_of_measurement_for_sales">ବିକ୍ରୟ ପାଇଁ ମାପର ଏକକ ଚୟନ କରନ୍ତୁ</string>
+    <string name="ntfp_select_unit_of_measurement_for_production">ଉତ୍ପାଦନ ପାଇଁ ମାପର ଏକକ ଚୟନ କରନ୍ତୁ</string>
+    <string name="ntfp_commencement_season">ଆରମ୍ଭ ଋତୁ</string>
+    <string name="farming_update_shg">କାର୍ଯ୍ୟକଳାପ ଅପଡେଟ୍ </string>
+    <string name="member_code">ସଦସ୍ୟ ସଂକେତ <font fgcolor="#FF0000">*</font></string>
+    <string name="total_gross_income">ମୋଟ ଆୟ</string>
+    <string name="quantity_sold_bsr">ବିକ୍ରି ପରିମାଣ (BSR)</string>
+    <string name="quantity_sold_csr">ବିକ୍ରି ପରିମାଣ (CSR)</string>
+    <string name="item_production">ଆଇଟମ୍ ଉତ୍ପାଦନ</string>
+    <string name="total_production_bsr">ମୋଟ ଉତ୍ପାଦନ (BSR)</string>
+    <string name="total_production_csr">ମୋଟ ଉତ୍ପାଦନ (CSR)</string>
+    <string name="value_addition">ମୂଲ୍ୟ ଯୋଗ</string>
+    <string name="select">ଚୟନ କର</string>
+    <string name="total_input_cost">ନିବେଶ ମୂଲ୍ୟ</string>
+    <string name="quantity_sold">ବିକ୍ରି ପରିମାଣ</string>
+    <string name="quantity_produced">ଉତ୍ପାଦିତ ପରିମାଣ</string>
+    <string name="item_sales">ଆଇଟମ୍ ବିକ୍ରୟ</string>
+    <string name="item_production_lbl">ଆଇଟମ୍ ଉତ୍ପାଦନ</string>
+    <string name="seasonal_income_bsr_for_the_month">ଋତୁ କାଳୀନ ଆୟ (BSR) ମାସ ପାଇଁ</string>
+    <string name="seasonal_income_csr_for_the_month">ଋତୁ କାଳୀନ ଆୟ (CSR) ମାସ ପାଇଁ</string>
+    <string name="commencement_season">ଆରମ୍ଭ ଋତୁ</string>
+    <string name="select_unit_of_measurement_for_sales">ବିକ୍ରୟ ମାପର ଏକକ ଚୟନ କରନ୍ତୁ</string>
+    <string name="select_unit_of_measurement_for_production">ଉତ୍ପାଦନର ମାପର ଏକକ ଚୟନ କରନ୍ତୁ</string>
+
+
+    <!-- profile page -->
+    <string name="change_password">ପାସୱାର୍ଡ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</string>
+    <string name="old_password">ଆପଣଙ୍କର ପୁରୁଣା ପାସୱାର୍ଡ ପ୍ରବେଶ କରନ୍ତୁ</string>
+    <string name="new_password">ଆପଣଙ୍କର ନୂତନ ପାସୱାର୍ଡ ପ୍ରବେଶ କରନ୍ତୁ</string>
+    <string name="change_email">ଇମେଲ୍ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</string>
+    <string name="old_email">ଆପଣଙ୍କର ପୁରୁଣା ଇମେଲ୍ ପ୍ରବେଶ କରନ୍ତୁ</string>
+    <string name="new_email">ଆପଣଙ୍କର ନୂତନ ଇମେଲ୍ ପ୍ରବେଶ କରନ୍ତୁ</string>
+    <string name="change_mobile">ମୋବାଇଲ୍ ନଂ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</string>
+    <string name="mobile_no_val">ଆପଣଙ୍କର 10 ଅଙ୍କ ବିଶିଷ୍ଟ ମୋବାଇଲ୍ ନମ୍ବର ପ୍ରବେଶ କରନ୍ତୁ</string>
+    <string name="old_mobile">ଆପଣଙ୍କର ପୁରୁଣା ମୋବାଇଲ୍ ନଂ ପ୍ରବେଶ କରନ୍ତୁ</string>
+    <string name="new_mobile">ଆପଣଙ୍କର ନୂତନ ମୋବାଇଲ୍ ନଂ ପ୍ରବେଶ କରନ୍ତୁ</string>
+    <string name="first_name">ପ୍ରଥମ ନାମ</string>
+    <string name="last_name">ଶେଷ ନାମ</string>
+    <string name="email">ଇମେଲ୍</string>
+    <string name="mobile">ମୋବାଇଲ୍ ନଂ</string>
+    <string name="designation">ପଦବୀ</string>
+    <string name="district">ଜିଲ୍ଲା</string>
+    <string name="block">ବ୍ଲକ</string>
+    <string name="gp">ଗ୍ରାମପଞ୍ଚାୟତ</string>
+    <string name="village">ଗାଁ</string>
+    <string name="update_str">ଅପଡେଟ୍</string>
+    <string name="password_validation">ପାସୱାର୍ଡରେ ଗୋଟିଏ ଅପର୍ କେସ୍, ଗୋଟିଏ ସ୍ୱତନ୍ତ୍ର ବର୍ଣ୍ଣ, ସର୍ବନିମ୍ନ 8 ଅଙ୍କ ରହିବା ଜରୁରୀ</string>
+
+</resources>

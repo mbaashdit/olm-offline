@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    tools:context=".ui.activities.NFSHGRegdActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_shg_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/space_0">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_add_non_farm_shg"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#E5E5E5"
+            android:elevation="@dimen/space_0"
+            app:contentInsetStart="@dimen/space_0">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <views.MonRegular
+                    android:id="@+id/tv_diary_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/space_16"
+                    android:src="@drawable/ic_edit" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view_shg_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_shg_submit"
+        android:layout_below="@+id/appbar_shg_list"
+        android:background="@drawable/add_shg_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <views.PoppinsMedium
+                android:visibility="gone"
+                android:id="@+id/tv_select_village_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/nf_select_village" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_village_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:id="@+id/spn_add_shg_select_village"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:smsp_enableSearchHeader="false"
+                    app:smsp_hint="@string/nf_select_village"
+                    app:smsp_isSearchable="true"
+                    app:smsp_enableFloatingLabel="false" />
+
+                <views.PoppinsMedium
+                    android:id="@+id/tv_select_village_lbl_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_16"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:text="" />
+
+            </androidx.cardview.widget.CardView>
+
+            <views.PoppinsMedium
+                android:visibility="gone"
+                android:id="@+id/tv_select_shg_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:id="@+id/spn_add_shg_select_shg"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:smsp_enableSearchHeader="false"
+                    app:smsp_hint="@string/select_shg"
+                    app:smsp_isSearchable="true"
+                    app:smsp_enableFloatingLabel="false"  />
+
+                <views.PoppinsMedium
+                    android:id="@+id/tv_select_shg_lbl_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_16"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:text="" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/et_farmers_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:background="@null"
+                        android:hint="@string/nf_no_of_members"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="4" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/et_base_capital"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:background="@null"
+                        android:hint="@string/base_capital_inr"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+            <views.PoppinsMedium
+                android:id="@+id/tv_fund_source_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/nf_fund_source" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.aashdit.olmoffline.utils.FundSourceSpinnerSearch
+                        android:id="@+id/spn_fund_sources"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        app:hintText="Multi Item Selection" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="20dp"
+                        android:text=""
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/tv_spn_fs_data"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_fund_source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:visibility="gone"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/cell_fund_source" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <views.PoppinsMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:text="@string/nf_select_unit_of_measurement_for_sales" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spn_add_shg_uom_sales"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
+
+
+            <views.PoppinsMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:text="@string/nf_select_unit_of_measurement_for_production" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spn_add_shg_uom_production"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/et_commence_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:background="@null"
+                        android:drawableEnd="@drawable/ic_calender"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:hint="@string/commencement_date"
+                        android:imeOptions="actionNext"
+                        android:inputType="date" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/et_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:background="@null"
+                        android:gravity="top|left"
+                        android:hint="@string/remark"
+                        android:maxLength="127" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/add_shg_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/submit">
+
+        <views.MonRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/submit"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progreses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

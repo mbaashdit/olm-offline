@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_profiling"
+        android:title="@string/profiling"
+        android:icon="@drawable/ic_profiling"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_activity"
+        android:title="@string/activity"
+        android:icon="@drawable/ic_activity"
+        />
+
+    <item
+        android:id="@+id/action_training"
+        android:title="@string/training"
+        android:icon="@drawable/ic_training"
+        />
+
+    <item
+        android:id="@+id/action_financial"
+        android:title="@string/financial"
+        android:icon="@drawable/ic_financial"
+        />
+
+    <item
+        android:id="@+id/action_attendance"
+        android:title="@string/attendance"
+        android:icon="@drawable/ic_attendance"
+        android:iconTint="#9F9F9F"
+        />
+</menu>

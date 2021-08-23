@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root_view"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_sch_activity_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <views.PoppinsMedium
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/space_4"
+                android:text="@string/scheme_lbl" />
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/spn_schemes"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:smsp_enableSearchHeader="false"
+                app:smsp_hint="Select Scheme"
+                app:smsp_isSearchable="true"
+                app:smsp_enableFloatingLabel="false"
+                android:layout_marginTop="@dimen/space_4"
+                android:layout_marginBottom="@dimen/space_4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_select_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_8"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <views.PoppinsMedium
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/space_4"
+                android:text="@string/select_type"  />
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/spn_act_type"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:smsp_enableSearchHeader="false"
+                app:smsp_hint="Select Activity Type"
+                app:smsp_isSearchable="true"
+                app:smsp_enableFloatingLabel="false"
+                android:layout_marginTop="@dimen/space_4"
+                android:layout_marginBottom="@dimen/space_4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_8"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <views.PoppinsMedium
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/space_4"
+                android:text="@string/activity_lbl" />
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/spn_activity"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:smsp_enableSearchHeader="false"
+                app:smsp_hint="Select Activity"
+                app:smsp_isSearchable="true"
+                app:smsp_enableFloatingLabel="false"
+                android:layout_marginTop="@dimen/space_4"
+                android:layout_marginBottom="@dimen/space_4" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <views.PoppinsMedium
+        android:id="@+id/tv_reporting_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_sch_activity_group"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginBottom="@dimen/space_8"
+        android:text="@string/reporting_lbl" />
+
+    <LinearLayout
+        android:id="@+id/ll_category"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tv_reporting_lbl"
+        android:layout_marginStart="@dimen/space_8"
+        android:layout_marginEnd="@dimen/space_8"
+        android:orientation="horizontal">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_clf"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_weight="0.33"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <views.PoppinsMedium
+                    android:id="@+id/tv_clf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/cluster"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_shg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_weight="0.33">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <views.PoppinsMedium
+                    android:id="@+id/tv_shg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/shg"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_hh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginEnd="@dimen/space_8"
+            android:layout_weight="0.33">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <views.PoppinsMedium
+                    android:id="@+id/tv_hh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/household"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/space_4"
+        android:id="@+id/ll_category2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/ll_category"
+        android:layout_marginStart="@dimen/space_8"
+        android:layout_marginEnd="@dimen/space_8"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_pg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_weight="0.5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <views.PoppinsMedium
+                    android:id="@+id/tv_pg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="PG"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_eg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginEnd="@dimen/space_8"
+            android:layout_weight="0.5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <views.PoppinsMedium
+                    android:id="@+id/tv_eg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="EG"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spn_sector"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ll_sch_activity_group"
+        android:layout_margin="@dimen/space_8"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spn_shg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ll_category"
+        android:layout_margin="@dimen/space_8"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/next_bg_drawable">
+
+        <views.PoppinsMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>

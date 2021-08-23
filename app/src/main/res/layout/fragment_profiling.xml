@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_profiling"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <views.MonRegular
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/space_16"
+                android:text="@string/profiling"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_profiling_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_profiling"
+        android:layout_marginStart="@dimen/space_4"
+        android:layout_marginEnd="@dimen/space_4"
+        android:visibility="visible" />
+
+
+    <views.MonBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/coming_soon"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_label_pm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/welcome" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_top_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_16"
+                    android:layout_marginEnd="@dimen/space_16">
+
+                    <views.MonBold
+                        android:id="@+id/tv_user_name_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:text="Username : " />
+
+                    <views.MonSemiBold
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:layout_toEndOf="@+id/tv_user_name_lbl"
+                        android:text="" />
+
+                    <views.MonBold
+                        android:id="@+id/tv_last_login_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:layout_toStartOf="@+id/tv_last_login"
+                        android:text="Last Login : "
+                        android:visibility="gone" />
+
+                    <views.MonBold
+                        android:id="@+id/tv_last_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:text="Last Login : "
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_geo_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_top_container"
+                    android:layout_margin="@dimen/space_16">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/space_8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space_8">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_left_panel"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <views.MonSemiBold
+                                    android:id="@+id/tv_district_lbl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="District : "
+                                    android:textColor="#B43D35" />
+
+                                <views.MonSemiBold
+                                    android:id="@+id/tv_district"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@+id/tv_district_lbl"
+                                    android:text=""
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:textColor="#58595B" />
+
+                                <views.MonSemiBold
+                                    android:id="@+id/tv_block_lbl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_district_lbl"
+                                    android:text="Block : "
+                                    android:textColor="#B43D35" />
+
+                                <views.MonSemiBold
+                                    android:id="@+id/tv_block"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_district"
+                                    android:layout_toEndOf="@+id/tv_block_lbl"
+                                    android:text=""
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:textColor="#58595B" />
+
+
+                                <View
+                                    android:visibility="gone"
+                                    android:layout_width="1dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="#878585" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <views.MonSemiBold
+                                    android:id="@+id/tv_gp_lbl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="GP : "
+                                    android:textColor="#B43D35" />
+
+                                <views.MonSemiBold
+                                    android:id="@+id/tv_gp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@+id/tv_gp_lbl"
+                                    android:text=""
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:textColor="#58595B" />
+
+                                <views.MonSemiBold
+                                    android:id="@+id/tv_village_lbl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_gp_lbl"
+                                    android:text="Village : "
+                                    android:textColor="#B43D35" />
+
+                                <views.MonSemiBold
+                                    android:id="@+id/tv_village"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_gp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:layout_toEndOf="@+id/tv_village_lbl"
+                                    android:text=""
+                                    android:textColor="#58595B" />
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pg_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space_8">
+
+                            <views.MonSemiBold
+                                android:id="@+id/tv_pg_lbl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#B43D35" />
+
+                            <views.MonSemiBold
+                                android:id="@+id/tv_pg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#58595B" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/ll_tiles_wraper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv_geo_details"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:layout_marginEnd="@dimen/space_8"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_titles_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_marginStart="@dimen/space_4"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:layout_marginEnd="@dimen/space_4"
+                            android:layout_marginBottom="@dimen/space_4"
+                            android:layout_weight="0.33"
+                            app:cardCornerRadius="@dimen/space_8">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ECFDFF">
+
+                                <views.MonBold
+                                    android:id="@+id/tv_tot_clf_reported"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/space_16"
+                                    android:text="0"
+                                    android:textColor="#00909F"
+                                    android:textSize="18sp" />
+
+                                <views.MonRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_tot_clf_reported"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="Total Cluster Reported"
+                                    android:textColor="#1D2F5E" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_margin="@dimen/space_4"
+                            android:layout_weight="0.33"
+                            app:cardCornerRadius="@dimen/space_8">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#FFF8F8">
+
+                                <views.MonBold
+                                    android:id="@+id/tv_tot_shg_reported"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/space_16"
+                                    android:text="0"
+                                    android:textColor="#FF7D78"
+                                    android:textSize="18sp" />
+
+                                <views.MonRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_tot_shg_reported"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="Total SHGs Reported"
+                                    android:textColor="#1D2F5E" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_marginStart="@dimen/space_4"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:layout_marginEnd="@dimen/space_4"
+                            android:layout_marginBottom="@dimen/space_4"
+                            android:layout_weight="0.33"
+                            app:cardCornerRadius="@dimen/space_8">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#FFF3FF">
+
+                                <views.MonBold
+                                    android:id="@+id/tv_tot_hh_reported"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/space_16"
+                                    android:text="0"
+                                    android:textColor="#6E276C"
+                                    android:textSize="18sp" />
+
+                                <views.MonRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_tot_hh_reported"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="Total Member Reported"
+                                    android:textColor="#1D2F5E" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_titles_container_um"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_pg"
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_marginStart="@dimen/space_4"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:layout_marginEnd="@dimen/space_4"
+                            android:layout_marginBottom="@dimen/space_4"
+                            android:layout_weight="0.25"
+                            app:cardCornerRadius="@dimen/space_8">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#FFE1EB">
+
+                                <views.MonBold
+                                    android:id="@+id/tv_tot_pg_reported"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/space_16"
+                                    android:text="0"
+                                    android:textColor="#DE094C"
+                                    android:textSize="18sp" />
+
+                                <views.MonRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_tot_pg_reported"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="Total PG Reported"
+                                    android:textColor="#1D2F5E" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_eg"
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:layout_marginEnd="@dimen/space_4"
+                            android:layout_marginBottom="@dimen/space_4"
+                            android:layout_weight="0.25"
+                            app:cardCornerRadius="@dimen/space_8">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ECFDFF">
+
+                                <views.MonBold
+                                    android:id="@+id/tv_tot_eg_reported"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/space_16"
+                                    android:text="0"
+                                    android:textColor="#00909F"
+                                    android:textSize="18sp" />
+
+                                <views.MonRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_tot_eg_reported"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="Total EG Reported"
+                                    android:textColor="#1D2F5E" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_shg"
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_margin="@dimen/space_4"
+                            android:layout_weight="0.25"
+                            app:cardCornerRadius="@dimen/space_8">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#FFF8F8">
+
+                                <views.MonBold
+                                    android:id="@+id/tv_tot_shg_reported_um"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/space_16"
+                                    android:text="0"
+                                    android:textColor="#FF7D78"
+                                    android:textSize="18sp" />
+
+                                <views.MonRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_tot_shg_reported_um"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="Total SHGs Reported"
+                                    android:textColor="#1D2F5E" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_hh"
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_marginStart="@dimen/space_4"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:layout_marginEnd="@dimen/space_4"
+                            android:layout_marginBottom="@dimen/space_4"
+                            android:layout_weight="0.25"
+                            app:cardCornerRadius="@dimen/space_8">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#FFF3FF">
+
+                                <views.MonBold
+                                    android:id="@+id/tv_tot_hh_reported_um"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/space_16"
+                                    android:text="0"
+                                    android:textColor="#6E276C"
+                                    android:textSize="18sp" />
+
+                                <views.MonRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_tot_hh_reported_um"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center"
+                                    android:text="Total Member Reported"
+                                    android:textColor="#1D2F5E" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_act_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/ll_tiles_wraper"
+                    android:layout_marginStart="@dimen/space_16"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:layout_marginEnd="@dimen/space_16"
+                    app:cardCornerRadius="@dimen/space_8">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <views.MonSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/space_16"
+                            android:text="No. of activities covered"
+                            android:textSize="17sp" />
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/space_16"
+                            android:background="@drawable/count_circle_bg">
+
+
+                            <views.MonBold
+                                android:id="@+id/tv_tot_act_covvered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="0"
+                                android:textColor="#FF8432"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_60"
+                    android:layout_marginStart="@dimen/space_16"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:layout_marginEnd="@dimen/space_16"
+                    android:layout_below="@+id/cv_act_view">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sync From Server"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/tv_sync_from_server"/>
+
+                    <Button
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sync to Server"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/tv_sync_to_server"/>
+
+                </RelativeLayout>
+
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress_circular"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

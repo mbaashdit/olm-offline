@@ -1,0 +1,502 @@
+<resources>
+    <string name="app_name">OLM Offline</string>
+
+    <!-- activity_management_fragment -->
+    <string name="shg">SHG</string>
+    <string name="cluster">Cluster</string>
+    <string name="household">Member</string>
+
+    <!-- LoginActivity -->
+    <string name="login_user_name">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_forget_password">Forgot Password ?</string>
+    <string name="login_signin">Login</string>
+    <string name="logout">Logout</string>
+
+    <!-- UpdateShgActivity -->
+    <string name="update_success">Updated Successfully</string>
+    <string name="update_activity_lbl">Update Activity</string>
+
+    <!-- DetailViewActivity -->
+    <string name="detail_view_no_of_goat_sold">No. of Goat Sold :</string>
+    <string name="detail_view_no_of_buck_sold">No. of Kids Sold :</string>
+    <string name="detail_view_income_generated">Gross Income Generated :</string>
+    <string name="detail_view_no_of_goat_buy">No. of Goat Bought :</string>
+    <string name="detail_view_no_of_buck_buy">No. of Kids Bought :</string>
+    <string name="detail_view_expenditure_cost">Total Input Cost :</string>
+    <string name="detail_view_no_of_goat_born">No. of Goat Born :</string>
+    <string name="detail_view_no_of_buck_born">No. of Kids Born :</string>
+    <string name="detail_view_no_of_goat_dead">No. of Goat Dead :</string>
+    <string name="detail_view_no_of_buck_dead">No. of Kids Dead :</string>
+    <string name="detail_view_no_of_goat_vaccinated">No. of Goat Vaccinated :</string>
+    <string name="detail_view_no_of_buck_vaccinated">No. of Kids Vaccinated :</string>
+    <string name="detail_view_goat_activity">Goatry Activity</string>
+    <string name="detail_view_buck_activity">Goat Kids Activity</string>
+
+
+    <!-- fragment activity -->
+    <string name="total">Total : </string>
+
+
+    <string name="remark">Remarks</string>
+    <string name="update">Update</string>
+    <string name="select_month">Select a Month</string>
+    <string name="regular_vaccination">Regular Vaccination </string>
+    <string name="Rs">\u20B9</string>
+    <string name="add_shg_activity">Add SHG Activity</string>
+    <string name="add_hh_activity">Add Member Activity</string>
+    <string name="add_clf_activity">Add CLF Activity</string>
+    <string name="select_shg">Select SHG</string>
+    <string name="no_of_households">No of Members</string>
+    <string name="no_of_goat">No. of Goats</string>
+    <string name="no_of_buck">No. of Kids</string>
+    <string name="type_of_goat_shed">Type Of Goat Shed</string>
+    <string name="base_capital_inr">Base Capital (INR)</string>
+    <string name="commencement_date">Commencement Date</string>
+    <string name="submit">SUBMIT</string>
+    <string name="profiling">Profiling</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="activity">Activity</string>
+    <string name="training">Training</string>
+    <string name="financial">Financial</string>
+    <string name="attendance">Attendance</string>
+    <string name="activity_management">Activity Management</string>
+    <string name="financial_management">Financial Management</string>
+    <string name="search">search</string>
+    <string name="coming_soon">coming soon</string>
+    <string name="regular_vaccination_and_deworming">Regular Vaccination and Deworming</string>
+    <string name="income_in">Net Income in</string>
+    <string name="avg_monthly_income_all_members">Avg. Monthly Income (All Members)</string>
+    <string name="avg_monthly_income_shg">Avg. Monthly Income (SHG)</string>
+    <string name="avg_monthly_income">Avg. Monthly Income</string>
+    <string name="new_update">New Update</string>
+    <string name="history">History</string>
+    <string name="year">Year</string>
+    <string name="no">No</string>
+    <string name="internal">Internal</string>
+    <string name="external">External</string>
+    <string name="name_of_book_keeper">Name of Book Keeper</string>
+    <string name="save">SAVE</string>
+    <string name="disability">Disability<font fgcolor="#FF0000">*</font></string>
+    <string name="religion">Religion<font fgcolor="#FF0000">*</font></string>
+    <string name="gender">Gender<font fgcolor="#FF0000">*</font></string>
+    <string name="pip_category">PIP category <font fgcolor="#FF0000">*</font></string>
+    <string name="leader">Leader <font fgcolor="#FF0000">*</font></string>
+    <string name="no_of_birds">No of Birds</string>
+    <string name="select_cluster_name">Select Cluster</string>
+    <string name="select_house_holds">Select Members</string>
+    <string name="no_of_bird_sold">No. of Bird Sold :</string>
+    <string name="no_of_bird_buy">No. of Bird Bought :</string>
+    <string name="no_of_bird_born">No. of Bird Born:</string>
+    <string name="no_of_bird_dead">No. of Bird Dead:</string>
+    <string name="no_of_bird_vaccinated">No. of Bird Vaccinated:</string>
+    <string name="no_of_birds_sold">No. of Birds Sold :</string>
+    <string name="bird_activity">Bird Activity</string>
+    <string name="no_of_birds_bought">No. of Birds Bought :</string>
+    <string name="no_of_birds_born">No. of Birds Born:</string>
+    <string name="no_of_birds_dead">No. of Birds Dead:</string>
+    <string name="view_previous_month_details">View Previous Month Details</string>
+    <string name="no_of_birds_lbl">No. of Birds</string>
+    <string name="type_of_birds_shed">Type of Birds Shed</string>
+    <string name="groups">Groups</string>
+    <string name="individual">All Members</string>
+    <string name="_0">0</string>
+    <string name="n_a">N/A</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="new_registration">New Registration</string>
+    <string name="overview">Overview</string>
+    <string name="approvals">Approvals</string>
+    <string name="month">Month</string>
+    <string name="scheme">Scheme</string>
+    <string name="pending">Pending</string>
+    <string name="approved">Approved</string>
+    <string name="reverted">Reverted</string>
+    <string name="crpcm_pending_details">Pending Details</string>
+
+
+    <string name="scheme_lbl">Select Scheme<font fgcolor="#FF0000">*</font></string>
+    <string name="activity_lbl">Select Activity<font fgcolor="#FF0000">*</font></string>
+    <string name="reporting_lbl">Reporting Level</string>
+    <string name="select_type">Select Type<font fgcolor="#FF0000">*</font></string>
+
+
+    <string name="location_information">Location Information</string>
+    <string name="select_district">Select District<font fgcolor="#FF0000">*</font></string>
+    <string name="select_block">Select Block<font fgcolor="#FF0000">*</font></string>
+    <string name="select_grampanchayat">Select Grampanchayat<font fgcolor="#FF0000">*</font></string>
+    <string name="select_village">Select Village<font fgcolor="#FF0000">*</font></string>
+    <string name="shg_information">SHG Information</string>
+    <string name="shg_name">SHG Name<font fgcolor="#FF0000">*</font></string>
+    <string name="date_of_formation">Date of Formation <font fgcolor="#FF0000">*</font></string>
+    <string name="shg_code">SHG Code<font fgcolor="#FF0000">*</font></string>
+    <string name="shg_regd">SHG Registration<font fgcolor="#FF0000">*</font></string>
+    <string name="shg_type">SHG Type<font fgcolor="#FF0000">*</font></string>
+    <string name="date_of_cooption_revival_into_nrlm">Date of Cooption/Revival into NRLM <font fgcolor="#FF0000">*</font></string>
+    <string name="promoted_by">Promoted By<font fgcolor="#FF0000">*</font></string>
+    <string name="account_details">Account Details</string>
+    <string name="bank">Bank <font fgcolor="#FF0000">*</font></string>
+    <string name="bank_branch">Bank Branch<font fgcolor="#FF0000">*</font></string>
+    <string name="sb_a_c_number">SB A/c Number<font fgcolor="#FF0000">*</font></string>
+    <string name="date_of_account_opening">Date of Account Opening<font fgcolor="#FF0000">*</font></string>
+    <string name="meeting_frequency">Meeting Frequency<font fgcolor="#FF0000">*</font></string>
+    <string name="monthly_amount_of_saving_per_member">Monthly Amount of Saving per member<font fgcolor="#FF0000">*</font></string>
+    <string name="basic_training_received">Basic Training Received</string>
+    <string name="active_bank_loan_a_c_number">Active Bank Loan A/C Number<font fgcolor="#FF0000">*</font></string>
+    <string name="amount_of_capital_subsidy_grant_received_prior_to_nrlm">Amount of Capital Subsidy/Grant received prior to NRLM:<font fgcolor="#FF0000">*</font></string>
+    <string name="have_trained_book_keeper">Have Trained Book keeper<font fgcolor="#FF0000">*</font></string>
+    <string name="create_shg_profile">Create SHG Profile</string>
+    <string name="update_shg_profile">Update SHG Profile</string>
+
+    <string name="add_a_member">Add A Member</string>
+    <string name="member_name">Member Name<font fgcolor="#FF0000">*</font></string>
+    <string name="father_husband_name">Father/Husband Name<font fgcolor="#FF0000">*</font></string>
+    <string name="social_category">Social Category<font fgcolor="#FF0000">*</font></string>
+    <string name="date_of_birth">Date Of Birth<font fgcolor="#FF0000">*</font></string>
+    <string name="date_of_joining_in_shg">Date of joining in SHG <font fgcolor="#FF0000">*</font></string>
+    <string name="education_level">Education Level <font fgcolor="#FF0000">*</font></string>
+    <string name="a_c_no">A/c No <font fgcolor="#FF0000">*</font></string>
+    <string name="enrolled_in_insurance_pmjjy">Enrolled in Insurance (PMJJY)</string>
+    <string name="enrolled_in_insurance_pmsby">Enrolled in Insurance (PMSBY)</string>
+    <string name="enrolled_in_insurance_others">Enrolled in Insurance (Others)</string>
+    <string name="enrolled_in_insurance_apy">Enrolled in Insurance (APY)</string>
+    <string name="aadhar_number">Aadhar Number <font fgcolor="#FF0000">*</font></string>
+    <string name="mobile_no">Mobile No. <font fgcolor="#FF0000">*</font></string>
+    <string name="aadhar_seeded_sb_a_c">Aadhar Seeded SB A/C</string>
+    <string name="shg_member">SHG MEMBER</string>
+    <string name="shg_list">SHG List</string>
+    <string name="next">NEXT</string>
+    <string name="send_for_approval">Send for Approval</string>
+    <string name="goats">Goats : </string>
+    <string name="bucks">Kids : </string>
+    <string name="birds">Birds : </string>
+    <string name="pending_">"Pending  "</string>
+    <string name="update_member">Update Member</string>
+    <string name="status">STATUS :</string>
+
+    <!-- psiciculture -->
+    <string name="fingerlings_harvested_kg">Fingerlings Harvested (kg)<font fgcolor="#FF0000">*</font> :</string>
+    <string name="table_size_fish_harvested_kg">Table Size Fish Harvested (Kg)<font fgcolor="#FF0000">*</font> :</string>
+    <string name="fingerlings_sold_kg">Fingerlings Sold (Kg)<font fgcolor="#FF0000">*</font> :</string>
+    <string name="table_size_fish_sold_kg">Table Size Fish Sold (Kg)<font fgcolor="#FF0000">*</font> :</string>
+    <string name="total_no_of_fry_stocked">Total No. of Fry Stocked :</string>
+    <string name="total_no_of_fingerlings_stocked">Total No. of Fingerlings Stocked :</string>
+    <string name="total_no_of_yearlings_stocked">Total No. of Yearlings Stocked :</string>
+    <string name="yearly_pond_cleaning_frequency">Yearly pond cleaning frequency</string>
+    <string name="feeding_qty_for">Feeding Qty For:</string>
+    <string name="fry_kg">Fry (kg)</string>
+    <string name="fingerlings_kg">Fingerlings(kg)</string>
+    <string name="yearlings_kg">Yearlings (kg)</string>
+    <string name="netting_management">Netting management</string>
+    <string name="netting_frequency">Netting Frequency</string>
+    <string name="pond_cleaning_frequency">Pond Cleaning Frequency</string>
+    <string name="number_of_ponds_leased">Number of Ponds Leased</string>
+    <string name="number_of_ponds_leased_regd">Number of Ponds Leased <font fgcolor="#FF0000">*</font></string>
+    <string name="pond_area_in_hectares">Pond area in Hectares</string>
+    <string name="pond_area_in_hectares_regd">Pond area in Hectares <font fgcolor="#FF0000">*</font></string>
+    <string name="qty_of_fry">Qty. of fry</string>
+    <string name="qty_of_fry_regd">Qty. of fry</string>
+    <string name="qty_of_fingerlings">Qty. of fingerlings</string>
+    <string name="qty_of_fingerlings_regd">Qty. of fingerlings <font fgcolor="#FF0000">*</font></string>
+    <string name="qty_of_yearling">Qty. of yearling</string>
+    <string name="qty_of_yearling_regd">Qty. of yearling <font fgcolor="#FF0000">*</font></string>
+    <string name="regular_netting">Regular netting</string>
+    <string name="feed_management">Feed management</string>
+    <string name="no_of_ponds_leased">No of pond on Leased </string>
+    <string name="total_area_of_pond_hectares">Total area of pond (Hectares)</string>
+    <string name="total_qty_of_fry_applied">Total Qty. of fry applied</string>
+    <string name="total_qty_of_fingerlings_applied">Total Qty. of fingerlings applied</string>
+    <string name="total_qty_of_yearling_applied">Total Qty. of yearling applied</string>
+    <string name="select_house_hold_regd">Select Members <font fgcolor="#FF0000">*</font></string>
+    <string name="number_of_ponds_owned_regd">Number of Ponds Owned <font fgcolor="#FF0000">*</font></string>
+    <string name="number_of_ponds_owned">Number of Ponds </string>
+    <string name="base_capital_inr_regd">Base Capital (INR) <font fgcolor="#FF0000">*</font></string>
+    <string name="commencement_date_regd">Commencement Date <font fgcolor="#FF0000">*</font></string>
+    <string name="select_shg_regd">Select SHG <font fgcolor="#FF0000">*</font></string>
+    <string name="no_of_households_shg_regd">No of Members <font fgcolor="#FF0000">*</font></string>
+    <string name="total_no_of_fry_stocked_regd">Total No. of Fry Stocked <font fgcolor="#FF0000">*</font> :</string>
+    <string name="total_no_of_fingerlings_stocked_regd">Total No. of Fingerlings Stocked <font fgcolor="#FF0000">*</font> :</string>
+    <string name="total_no_of_yearlings_stocked_regd">Total No. of Yearlings Stocked <font fgcolor="#FF0000">*</font> :</string>
+    <string name="yearly_pond_cleaning_frequency_regd">Yearly pond cleaning frequency <font fgcolor="#FF0000">*</font></string>
+    <string name="fingerlings">Fingerlings : </string>
+    <string name="cows">Cows/Buffaloes : </string>
+    <string name="calves">Calves : </string>
+    <string name="table_size_fish">Tab. Size Fish : </string>
+    <string name="monthly_frequency">Monthly Frequency</string>
+    <string name="regular_deworming">Regular Deworming</string>
+    <string name="number_of_members">Number of Members</string>
+    <string name="add_member_activity">Add Member Activity</string>
+    <string name="bucks_tied">Bucks Tied ?</string>
+    <string name="total_harvested_fingerlings">Total Harvested Fingerlings</string>
+    <string name="total_harvested_table_size_fish">Total Harvested Table Size Fish</string>
+    <string name="no_of_farmers">No. of Farmers</string>
+    <string name="area_of_pond">Area of Pond</string>
+    <string name="feeding_management">Feeding Management</string>
+    <string name="income_from_fingerling_sales">Income From Fingerling Sales</string>
+    <string name="income_from_tab_size_fish_sales">Income From Tab.Size Fish Sales</string>
+    <string name="details_view">Details View</string>
+    <string name="fingerlings_harvested_kg_view">Fingerlings Harvested (kg) :</string>
+    <string name="table_size_fish_harvested_kg_view">Table Size Fish Harvested (Kg):</string>
+    <string name="fingerlings_sold_kg_view">Fingerlings Sold (Kg):</string>
+    <string name="table_size_fish_sold_kg_view">Table Size Fish Sold (Kg) :</string>
+    <string name="total_no_of_fry_stocked_view">Total No. of Fry Stocked :</string>
+    <string name="total_no_of_fingerlings_stocked_view">Total No. of Fingerlings Stocked :</string>
+    <string name="total_no_of_yearlings_stocked_view">Total No. of Yearlings Stocked :</string>
+    <string name="frequency_view">Frequency</string>
+    <string name="total_no_of_fry_stocked_hh">Total No. of Fry Stocked</string>
+    <string name="total_no_of_fingerlings_stocked_hh">Total No. of Fingerlings Stocked</string>
+    <string name="total_no_of_yearlings_stocked_hh">Total No. of Yearlings Stocked</string>
+
+
+    <string name="no_of_cows_buffaloes">No. of Cows / Buffaloes</string>
+    <string name="no_of_calves">No. of Calves</string>
+    <string name="type_of_cow_shed">Type of Cow Shed</string>
+    <string name="select_member">Select Member</string>
+    <string name="total_no_of_cows_buffaloes">Total No. Of Cows / Buffaloes</string>
+    <string name="total_no_of_calves">Total No. Of Calves</string>
+    <string name="avg_daily_milk_production_ltrs">Avg. Daily Milk Production (ltrs):</string>
+    <string name="avg_daily_milk_sales_ltrs">Avg. Daily Milk Sales (ltrs) :</string>
+    <string name="no_of_cows_buffaloes_sold">No. of Cows / Buffaloes Sold :</string>
+    <string name="no_of_calves_sold">No. of Calves sold :</string>
+    <string name="no_of_cows_buffaloes_bought">No. of Cows / Buffaloes Bought :</string>
+    <string name="no_of_calves_bought">No. of Calves Bought :</string>
+    <string name="no_of_calves_born">No. of Calves Born :</string>
+    <string name="no_of_cows_buffaloes_dead">No. of Cows / Buffaloes dead :</string>
+    <string name="no_of_calves_dead">No. of calves dead :</string>
+    <string name="qty_of_milk_produced_ltrs">Qty of Milk Produced (ltrs)</string>
+    <string name="qty_of_milk_sold_ltrs">Qty of Milk Sold (ltrs)</string>
+    <string name="income_from_milk_sales">Income from Milk Sales</string>
+    <string name="regular_vaccination_dairy">Regular Vaccination</string>
+    <string name="deworming">Deworming</string>
+    <string name="no_of_egg_sold">No. of Egg Sold :</string>
+    <string name="income_from_bird_sales">Income From Bird Sales :</string>
+    <string name="income_from_egg_sales">Income From Egg Sales :</string>
+    <string name="change_language">Change language</string>
+    <string name="seasonal_income">Seasonal Income</string>
+
+
+    <string-array name="years">
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+    </string-array>
+
+
+    <string-array name="mood_array">
+        <item>Accepted</item>
+        <item>Accomplished</item>
+        <item>Aggravated</item>
+        <item>Alone</item>
+        <item>Amused</item>
+        <item>Angry</item>
+        <item>Annoyed</item>
+        <item>Anxious</item>
+        <item>Apathetic</item>
+        <item>Ashamed</item>
+        <item>Awake</item>
+        <item>Bewildered</item>
+        <item>Bitchy</item>
+        <item>Bittersweet</item>
+        <item>Blah</item>
+        <item>Blank</item>
+        <item>Blissful</item>
+        <item>Bored</item>
+        <item>Bouncy</item>
+        <item>Calm</item>
+        <item>Cheerful</item>
+        <item>Chipper</item>
+        <item>Cold</item>
+        <item>Complacent</item>
+        <item>Confused</item>
+        <item>Content</item>
+        <item>Cranky</item>
+        <item>Crappy</item>
+        <item>Crazy</item>
+        <item>Crushed</item>
+        <item>Curious</item>
+        <item>Cynical</item>
+        <item>Dark</item>
+        <item>Depressed</item>
+        <item>Determined</item>
+        <item>Devious</item>
+        <item>Dirty</item>
+        <item>Disappointed</item>
+        <item>Discontent</item>
+        <item>Ditzy</item>
+        <item>Dorky</item>
+        <item>Drained</item>
+        <item>Drunk</item>
+        <item>Ecstatic</item>
+        <item>Energetic</item>
+        <item>Enraged</item>
+        <item>Enthralled</item>
+        <item>Envious</item>
+        <item>Exanimate</item>
+        <item>Excited</item>
+        <item>Exhausted</item>
+        <item>Flirty</item>
+        <item>Frustrated</item>
+        <item>Full</item>
+        <item>Geeky</item>
+        <item>Giddy</item>
+        <item>Giggly</item>
+        <item>Gloomy</item>
+        <item>Good</item>
+        <item>Grateful</item>
+        <item>Groggy</item>
+        <item>Grumpy</item>
+        <item>Guilty</item>
+        <item>Happy</item>
+        <item>High</item>
+        <item>Hopeful</item>
+        <item>Hot</item>
+        <item>Hungry</item>
+        <item>Hyper</item>
+        <item>Impressed</item>
+        <item>Indescribable</item>
+        <item>Indifferent</item>
+        <item>Infuriated</item>
+        <item>Irate</item>
+        <item>Irritated</item>
+        <item>Jealous</item>
+        <item>Jubilant</item>
+        <item>Lazy</item>
+        <item>Lethargic</item>
+        <item>Listless</item>
+        <item>Lonely</item>
+        <item>Loved</item>
+        <item>Mad</item>
+        <item>Melancholy</item>
+        <item>Mellow</item>
+        <item>Mischievous</item>
+        <item>Moody</item>
+        <item>Morose</item>
+        <item>Naughty</item>
+        <item>Nerdy</item>
+        <item>NotSpecified</item>
+        <item>Numb</item>
+        <item>Okay</item>
+        <item>Optimistic</item>
+        <item>Peaceful</item>
+        <item>Pessimistic</item>
+        <item>Pissedoff</item>
+        <item>Pleased</item>
+        <item>Predatory</item>
+        <item>Quixotic</item>
+        <item>Recumbent</item>
+        <item>Refreshed</item>
+        <item>Rejected</item>
+        <item>Rejuvenated</item>
+        <item>Relaxed</item>
+        <item>Relieved</item>
+        <item>Restless</item>
+        <item>Rushed</item>
+        <item>Sad</item>
+        <item>Satisfied</item>
+        <item>Shocked</item>
+        <item>Sick</item>
+        <item>Silly</item>
+        <item>Sleepy</item>
+        <item>Smart</item>
+        <item>Stressed</item>
+        <item>Surprised</item>
+        <item>Sympathetic</item>
+        <item>Thankful</item>
+        <item>Tired</item>
+        <item>Touched</item>
+        <item>Uncomfortable</item>
+        <item>Weird</item>
+
+    </string-array>
+
+    <string name="type_to_search">Type to Search</string>
+    <string name="farming_no_of_farmers">No of Farmers</string>
+    <string name="farming_seed_type">Seed Type</string>
+    <string name="farming_irrigation_source">Irrigation Source</string>
+    <string name="farming_select_unit_of_measurement_for_sales">Select Unit of Measurement for sales</string>
+    <string name="farming_select_unit_of_measurement_for_production">Select Unit of Measurement for Production</string>
+    <string name="farming_fund_source">Fund source</string>
+    <string name="farming_commencement_season">Commencement Season</string>
+    <string name="farming_update_member">Update Member Activity</string>
+    <string name="farming_all_members">All Members</string>
+    <string name="farming_total_sales">Total Sales</string>
+    <string name="farming_total_production">Total Production</string>
+    <string name="farming_item_sales">Item Sales</string>
+    <string name="farming_quantity_sold">Quantity Sold</string>
+    <string name="farming_item_production">Item Production</string>
+    <string name="farming_quantity_produced">Quantity Produced</string>
+    <string name="farming_total_input_cost">Total Input Cost</string>
+    <string name="farming_seasonal_income">Seasonal Income</string>
+    <string name="farming_total_gross_income">Total Gross Income</string>
+    <string name="nf_select_village">Select Village</string>
+    <string name="nf_no_of_members">No of Members</string>
+    <string name="nf_fund_source">Fund source</string>
+    <string name="nf_select_unit_of_measurement_for_sales">Select Unit of Measurement for sales</string>
+    <string name="nf_select_unit_of_measurement_for_production">Select Unit of Measurement for Production</string>
+    <string name="nf_select_entrepreneur">Select Entrepreneur</string>
+    <string name="nf_total_profit">Total Profit</string>
+    <string name="nf_has_acquired_training">Has Acquired Training?</string>
+    <string name="nf_total_sales_inr">Total Sales (INR)</string>
+    <string name="nf_total_input_cost_inr">Total Input Cost (INR)</string>
+    <string name="nf_total_profit_inr">Total Profit (INR)</string>
+    <string name="nf_add_enp">Add Entrepreneur Activity</string>
+    <string name="nf_update_enp">Update Entrepreneur Activity</string>
+    <string name="nf_act_type">Activity Type</string>
+    <string name="ntfp_select_village">Select Village</string>
+    <string name="ntfp_select_pg_name">Select PG</string>
+    <string name="ntfp_no_of_members">No of Members</string>
+    <string name="ntfp_fund_source">Fund source</string>
+    <string name="ntfp_select_unit_of_measurement_for_sales">Select Unit of Measurement for sales</string>
+    <string name="ntfp_select_unit_of_measurement_for_production">Select Unit of Measurement for Production</string>
+    <string name="ntfp_commencement_season">Commencement Season</string>
+    <string name="farming_update_shg">Update SHG Activity</string>
+    <string name="member_code">Member Code <font fgcolor="#FF0000">*</font></string>
+    <string name="total_gross_income">Total Gross Income</string>
+    <string name="quantity_sold_bsr">Quantity Sold (BSR)</string>
+    <string name="quantity_sold_csr">Quantity Sold (CSR)</string>
+    <string name="item_production">Item Production</string>
+    <string name="total_production_bsr">Total Production (BSR)</string>
+    <string name="total_production_csr">Total Production (CSR)</string>
+    <string name="value_addition">Value Addition</string>
+    <string name="select">Select</string>
+    <string name="total_input_cost">Total Input Cost</string>
+    <string name="quantity_sold">Quantity Sold</string>
+    <string name="quantity_produced">Quantity Produced</string>
+    <string name="item_sales">Item Sales</string>
+    <string name="item_production_lbl">Item Production</string>
+    <string name="seasonal_income_bsr_for_the_month">Seasonal Income (BSR) for the month</string>
+    <string name="seasonal_income_csr_for_the_month">Seasonal Income (CSR) for the month</string>
+    <string name="commencement_season">Commencement Season</string>
+    <string name="select_unit_of_measurement_for_sales">Select Unit of Measurement for sales</string>
+    <string name="select_unit_of_measurement_for_production">Select Unit of Measurement for Production</string>
+
+
+    <!-- profile page -->
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Enter your old password</string>
+    <string name="new_password">Enter your new password</string>
+    <string name="change_email">Change Email</string>
+    <string name="old_email">Enter your old email</string>
+    <string name="new_email">Enter your new email</string>
+    <string name="change_mobile">Change Mobile No</string>
+    <string name="mobile_no_val">Enter your 10 digit mobile number</string>
+    <string name="old_mobile">Enter your old Mobile No</string>
+    <string name="new_mobile">Enter your new Mobile No</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile No</string>
+    <string name="designation">Designation</string>
+    <string name="district">District</string>
+    <string name="block">Block</string>
+    <string name="gp">Grampanchayat</string>
+    <string name="village">Village</string>
+    <string name="update_str">UPDATE</string>
+    <string name="password_validation">Password must contains One UpperCase , One Special Character , min 8 digits</string>
+
+    <!-- dashboard page -->
+
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aashdit.olmoffline.utils.SwipeRevealLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_8"
+    android:layout_marginTop="@dimen/space_4"
+    android:layout_marginEnd="@dimen/space_8"
+    android:layout_marginBottom="@dimen/space_4"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <views.MonRegular
+            android:id="@+id/cell_tv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/space_12"
+            android:gravity="center"
+            android:padding="@dimen/space_8"
+            android:text="Delete"
+            android:textColor="#1F8787" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_cell_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_4"
+            app:cardCornerRadius="@dimen/space_8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <views.MonBold
+                    android:id="@+id/cell_tv_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_16"
+                    android:background="@drawable/cell_txt_bg"
+                    android:padding="@dimen/space_16"
+                    android:text="S"
+                    android:textSize="18sp" />
+
+
+                <views.MonBold
+                    android:id="@+id/cell_tv_shg_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_16"
+                    android:layout_marginEnd="@dimen/space_16"
+                    android:layout_toEndOf="@+id/cell_tv_lbl"
+                    android:text="SHG Name 1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_chevron" />
+
+                <views.MonRegular
+                    android:id="@+id/cell_tv_shg_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cell_tv_shg_name"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:layout_toEndOf="@+id/cell_tv_lbl"
+                    android:text="ID1445GTH"
+                    android:textColor="#4F58595B"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</com.aashdit.olmoffline.utils.SwipeRevealLayout2>

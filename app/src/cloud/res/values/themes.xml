@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!--    &lt;!&ndash; Base application theme. &ndash;&gt;-->
+<!--    <style name="Theme.OLM_android" parent="Theme.MaterialComponents.DayNight.NoActionBar">&lt;!&ndash;Theme.MaterialComponents.DayNight.NoActionBar&ndash;&gt;&lt;!&ndash;.NoActionBar.Bridge&ndash;&gt;-->
+<!--        &lt;!&ndash; Primary brand color. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/purple_500</item>-->
+<!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
+<!--        <item name="colorOnPrimary">@color/white</item>-->
+<!--        &lt;!&ndash; Secondary brand color. &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/teal_200</item>-->
+<!--        <item name="colorSecondaryVariant">@color/teal_700</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+<!--        &lt;!&ndash; Status bar color. &ndash;&gt;-->
+<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--    </style>-->
+
+<!--    <style name="AutoComplete" parent="Theme.OLM_android">-->
+<!--        <item name="colorControlNormal">@color/purple_500</item>-->
+<!--        <item name="colorControlActivated">@color/purple_500</item>-->
+<!--    </style>-->
+
+<!--    <style name="Theme.OLM_android_white" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+<!--        &lt;!&ndash; Primary brand color. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/white</item>-->
+<!--        <item name="colorPrimaryVariant">@color/white</item>-->
+<!--        <item name="colorOnPrimary">@color/white</item>-->
+<!--        &lt;!&ndash; Secondary brand color. &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/teal_200</item>-->
+<!--        <item name="colorSecondaryVariant">@color/teal_700</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+<!--        &lt;!&ndash; Status bar color. &ndash;&gt;-->
+<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--    </style>-->
+
+<!--    <style name="SCBSwitch" parent="Theme.AppCompat.Light">-->
+<!--        &lt;!&ndash; active thumb & track color (30% transparency) &ndash;&gt;-->
+<!--        <item name="colorControlActivated">@color/purple_500</item>-->
+
+<!--        &lt;!&ndash; inactive thumb color &ndash;&gt;-->
+<!--        <item name="colorSwitchThumbNormal">#f1f1f1-->
+<!--        </item>-->
+
+<!--        &lt;!&ndash; inactive track color (30% transparency) &ndash;&gt;-->
+<!--        <item name="android:colorForeground">#42221f1f-->
+<!--        </item>-->
+<!--    </style>-->
+</resources>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_sch_activity_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <views.PoppinsMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_8"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:text="@string/year"
+                            android:textSize="15sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spn_years"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="@dimen/space_8"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:layout_marginEnd="@dimen/space_4"
+                            android:layout_marginBottom="@dimen/space_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.34"
+                        android:orientation="vertical">
+
+                        <views.PoppinsMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_8"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:text="@string/month"
+                            android:textSize="15sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spn_months"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="@dimen/space_4"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:layout_marginEnd="@dimen/space_8"
+                            android:layout_marginBottom="@dimen/space_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+                        <views.PoppinsMedium
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_8"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:text="@string/scheme"
+                            android:textSize="15sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spn_schemes"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="@dimen/space_4"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:layout_marginEnd="@dimen/space_8"
+                            android:layout_marginBottom="@dimen/space_8" />
+                    </LinearLayout>
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sch_activity_group_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_activity_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <views.PoppinsMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_8"
+                            android:layout_gravity="center_vertical"
+                            android:text="Activity Type"
+                            android:textSize="15sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spn_act_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="@dimen/space_4"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:layout_marginEnd="@dimen/space_8"
+                            android:layout_marginBottom="@dimen/space_8" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <views.PoppinsMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_8"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/activity"
+                            android:textSize="15sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spn_activities"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="@dimen/space_4"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:layout_marginEnd="@dimen/space_8"
+                            android:layout_marginBottom="@dimen/space_8" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:layout_marginEnd="@dimen/space_8"
+                    android:orientation="horizontal">
+
+                    <views.MonRegular
+                        android:id="@+id/tv_pending"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:layout_marginBottom="@dimen/space_4"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="@string/pending"
+                        android:textColor="@color/black" />
+
+                    <views.MonRegular
+                        android:id="@+id/tv_approved"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:layout_marginBottom="@dimen/space_4"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="@string/approved"
+                        android:textColor="@color/black" />
+
+                    <views.MonRegular
+                        android:id="@+id/tv_reverted"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:layout_marginBottom="@dimen/space_4"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="@string/reverted"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="@dimen/space_8"
+                    app:cardCornerRadius="@dimen/space_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:minHeight="400dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:overScrollMode="never"
+                            android:id="@+id/rv_approvals"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Items Found"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/tv_no_items"/>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

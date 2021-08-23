@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level"   value="1" />
+        </attr>
+
+        <attr name="flingVelocity" format="integer" />
+
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PoppinsMedium">
+        <attr name="PoppinsMediumFont" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="PoppinsSemiBold">
+        <attr name="PoppinsSemiBoldFont" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MTCORSVA">
+        <attr name="MTCORSVACustom" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MonBold">
+        <attr name="MonBoldCustom" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MonLight">
+        <attr name="MonLightCustom" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MonRegulaar">
+        <attr name="MonRegularCustom" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MonSemiBold">
+        <attr name="MonSemiBoldCustom" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoRegular">
+        <attr name="RobotoRegularCustomFont" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RalewayRegular">
+        <attr name="RalewayRegularCustomFont" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoMedium">
+        <attr name="RobotoMediumCustomFont" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoBold">
+        <attr name="RobotoBoldCustomFont" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedHorizontalProgress">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="isRounded" format="boolean"/> <!-- Default Value is true(Rounded) -->
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer"/>
+        <attr name="ExpandableTextViewCustomFont" format="string"/>
+    </declare-styleable>
+
+
+</resources>

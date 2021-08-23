@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    tools:context=".ui.activities.NTFTUpdateActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_update_shg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"
+        app:elevation="@dimen/space_0">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_update_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:elevation="@dimen/space_0"
+            app:contentInsetStart="@dimen/space_0">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <views.MonRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/update_activity_lbl"
+                    android:textColor="@color/black" />
+
+
+                <views.MonRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/space_4"
+                    android:layout_toStartOf="@+id/spn_year"
+                    android:text="@string/year" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spn_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/space_8">
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom_panel"
+        android:layout_below="@+id/appbar_update_shg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_update_month_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <views.MonRegular
+                    android:id="@+id/tv_wf_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:layout_marginEnd="@dimen/space_8"
+                    android:padding="@dimen/space_8"
+                    android:text="@string/status" />
+
+                <views.MonRegular
+                    android:id="@+id/tv_wf_comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wf_status"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:layout_marginEnd="@dimen/space_8"
+                    android:layout_marginBottom="@dimen/space_4"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#DC084C" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_16">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:id="@+id/goatry_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:text="@string/item_sales"
+                        android:textColor="#CA2859"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:id="@+id/view_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/goatry_lbl"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:background="#b3b3b3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_divider"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <views.PoppinsMedium
+                                android:id="@+id/tv_sales_lbl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/quantity_sold" />
+
+                            <views.PoppinsMedium
+                                android:id="@+id/tv_sales_uom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/tv_sales_lbl"
+                                android:text="" />
+
+                            <EditText
+                                android:id="@+id/et_update_sales_qty_sold"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="8" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                app:cardCornerRadius="@dimen/space_16">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:id="@+id/farmer_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:text="@string/item_production_lbl"
+                        android:textColor="#CA2859"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:id="@+id/view_divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/farmer_lbl"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:background="#b3b3b3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_divider2"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <views.PoppinsMedium
+                                android:id="@+id/tv_production_lbl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/quantity_produced" />
+
+
+                            <views.PoppinsMedium
+                                android:id="@+id/tv_prod_uom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/tv_production_lbl"
+                                android:text="" />
+
+                            <EditText
+                                android:id="@+id/et_update_prod_qty_sold"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="8" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <views.PoppinsMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/value_addition"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.aashdit.olmoffline.utils.ValueAdditionSpinnerSearch
+                        android:id="@+id/spn_value_additions"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        app:hintText="Multi Item Selection" />
+
+                    <TextView
+                        android:id="@+id/tv_select_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/select" />
+
+                    <TextView
+                        android:id="@+id/tv_spn_va_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center_vertical"
+                        android:text="" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/et_ntfp_total_input_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:background="@null"
+                        android:hint="Total Input Cost"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="9" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/et_ntfp_total_seasonal_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:background="@null"
+                        android:hint="@string/seasonal_income"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="9" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/et_ntfp_total_gross_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:background="@null"
+                        android:hint="@string/total_gross_income"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="9" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <EditText
+                android:id="@+id/et_update_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                android:background="@drawable/edittext_bg"
+                android:gravity="top|left"
+                android:hint="@string/remark"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:maxLength="126"
+                android:padding="@dimen/space_8" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/submit">
+
+        <RelativeLayout
+            android:id="@+id/rl_activity_update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <views.PoppinsSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/update"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>

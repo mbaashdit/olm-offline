@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_alpha"
+    android:orientation="vertical"
+    android:padding="@dimen/space_16">
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/space_16"
+        android:src="@drawable/ic_close_24"
+        app:tint="@color/gray" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/space_16"
+        android:orientation="vertical">
+
+
+        <views.MonRegular
+            android:id="@+id/tv_change_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_old_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <EditText
+            android:id="@+id/et_new_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <TextView
+            android:id="@+id/tv_password_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:text="@string/password_validation" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_8"
+            android:background="@drawable/ic_login_btn_bg"
+            android:text="@string/update_str"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

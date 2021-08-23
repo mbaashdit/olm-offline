@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.activities.AddShgMemberActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_shg_add_member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/space_0">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_shg_add_member"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="@dimen/space_0"
+            android:background="@color/white"
+            app:contentInsetStart="@dimen/space_0">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <views.MonRegular
+                    android:id="@+id/tv_toolbar_title_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_a_member"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/space_24"
+                    android:id="@+id/iv_add_shg_member"/>
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/appbar_shg_add_member"
+        android:layout_above="@+id/add_shg_member_submit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:hint="@string/member_name"
+                app:boxBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/et_shg_member_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:hint="@string/father_husband_name"
+                app:boxBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/et_father_hus_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:hint="@string/member_code"
+                app:boxBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/et_member_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLength="10"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <views.PoppinsSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/social_category" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="@dimen/space_4"
+                    android:layout_weight="0.5">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spn_social_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/space_4" />
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/space_60"
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="@dimen/space_4"
+                    android:hint="@string/date_of_birth"
+                    app:boxBackgroundColor="@color/white">
+
+                    <EditText
+                        android:id="@+id/et_shg_member_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_new_calender"
+                        android:focusable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <views.PoppinsSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/disability" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:background="@color/white"
+                android:id="@+id/spn_add_shg_member_disability"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8" />
+
+
+            <views.PoppinsSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/religion" />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:background="@color/white"
+                android:id="@+id/spn_add_shg_member_religion"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8" />
+
+
+            <views.PoppinsSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/gender" />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:background="@color/white"
+                android:id="@+id/spn_add_shg_member_gender"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8" />
+
+
+            <views.PoppinsSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/pip_category" />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spn_add_shg_member_pip_category"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8" />
+
+
+            <views.PoppinsSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/leader" />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:background="@color/white"
+                android:id="@+id/spn_add_shg_member_leader"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:hint="@string/date_of_joining_in_shg"
+                app:boxBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/et_shg_member_joining"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_new_calender"
+                    android:focusable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:hint="@string/education_level"
+                app:boxBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/et_shg_member_education_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLength="60"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsSemiBold
+                        android:id="@+id/tv_bank_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_4"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:text="@string/bank" />
+
+                    <AutoCompleteTextView
+                        android:theme="@style/AutoComplete"
+                        android:id="@+id/act_mem_bank_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_bank_lbl"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:imeOptions="actionNext"
+                        android:inputType="text" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="@dimen/space_60"-->
+            <!--                android:hint="Bank Name*"-->
+            <!--                app:boxBackgroundColor="@color/white">-->
+
+            <!--                <AutoCompleteTextView-->
+            <!--                    android:id="@+id/act_mem_bank_name"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_marginStart="@dimen/space_8"-->
+            <!--                    android:layout_marginEnd="@dimen/space_8"-->
+            <!--                    android:imeOptions="actionNext"-->
+            <!--                    android:inputType="text" />-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <views.PoppinsSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/bank_branch" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spn_mem_branch_list"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_4"
+                android:layout_marginEnd="@dimen/space_8"
+                android:layout_marginBottom="@dimen/space_8"
+                android:background="@color/white" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:hint="@string/a_c_no"
+                app:boxBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/et_mem_ac_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLength="20"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/enrolled_in_insurance_pmjjy" />
+
+
+                    <Switch
+                        android:id="@+id/switch_pmjjy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/space_8" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/enrolled_in_insurance_pmsby" />
+
+
+                    <Switch
+                        android:id="@+id/switch_pmsby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/space_8" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/enrolled_in_insurance_others" />
+
+
+                    <Switch
+                        android:id="@+id/switch_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/space_8" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/enrolled_in_insurance_apy" />
+
+
+                    <Switch
+                        android:id="@+id/switch_apy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/space_8" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:hint="@string/aadhar_number"
+                app:boxBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/et_mem_aadhar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="12" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8"
+                android:hint="@string/mobile_no"
+                app:boxBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/et_mem_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/aadhar_seeded_sb_a_c" />
+
+
+                    <Switch
+                        android:id="@+id/switch_sbac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/space_8" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/add_shg_member_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/submit">
+
+        <views.MonRegular
+            android:id="@+id/member_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/save"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_circular"/>
+</RelativeLayout>

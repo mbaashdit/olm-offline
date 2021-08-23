@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_8"
+    android:layout_marginTop="@dimen/space_8"
+    android:layout_marginEnd="@dimen/space_8"
+    app:cardCornerRadius="@dimen/space_8"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="#FFEFEF">
+
+                <views.PoppinsMedium
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:id="@+id/cell_pending_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/space_4"
+                    android:text=""
+                    android:textColor="#FF3D00"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:background="#FFEFEF"
+                    android:padding="@dimen/space_8"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <views.PoppinsMedium
+                        android:id="@+id/cell_pending_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="NOV"
+                        android:textColor="#FF3D00"
+                        android:textSize="18sp" />
+
+                    <views.PoppinsMedium
+                        android:id="@+id/cell_pending_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cell_pending_month"
+                        android:layout_centerHorizontal="true"
+                        android:text="2020"
+                        android:textColor="#FF3D00"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7">
+
+
+                <views.PoppinsMedium
+                    android:id="@+id/cell_pending_scheme_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:text="Scheme Name"
+                    android:textColor="#6E276C"
+                    android:textSize="18sp" />
+
+                <views.PoppinsMedium
+                    android:layout_below="@+id/cell_pending_scheme_name"
+                    android:id="@+id/cell_pending_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:text="Title"
+                    android:maxLines="1"
+                    android:textColor="#6E276C"
+                    android:textSize="16sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:layout_marginEnd="@dimen/space_8"
+                    android:layout_marginBottom="@dimen/space_8"
+                    android:orientation="horizontal">
+
+                    <views.PoppinsMedium
+                        android:id="@+id/cell_pending_clf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cluster: 5"
+                        android:textColor="#FF3D00"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <views.PoppinsMedium
+                        android:id="@+id/cell_pending_shg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/space_0"
+                        android:text="SHG: 0"
+                        android:textColor="#011A59"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <views.PoppinsMedium
+                        android:id="@+id/cell_pending_hh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Member: 2"
+                        android:textColor="#6E276C"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/cell_pending_shg"
+                        app:layout_constraintStart_toEndOf="@+id/cell_pending_clf"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

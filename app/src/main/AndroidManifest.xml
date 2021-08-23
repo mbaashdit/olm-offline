@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aashdit.olmoffline">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".app.OLM"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity android:name=".ui.activities.GoatryUpdateOfflineActivity"></activity>
+        <activity android:name=".ui.activities.OFDetailsViewActivity" />
+        <activity android:name=".ui.activities.OFUpdateActivity" />
+        <activity android:name=".ui.activities.OFViewMainActivity" />
+        <activity android:name=".ui.activities.OFHHRegdActivity" />
+        <activity android:name=".ui.activities.OFLGRegdActivity" />
+        <activity android:name=".ui.activities.NtftTasarDetailsViewActivity" />
+        <activity android:name=".ui.activities.NtfpTaserUpdateActivity" />
+        <activity android:name=".ui.activities.NtfpTasarHHActivity" />
+        <activity android:name=".ui.activities.NtfpTasarShgActivity" />
+        <activity android:name=".ui.activities.NTFPDetailsViewActivity" />
+        <activity android:name=".ui.activities.NTFTUpdateActivity" />
+        <activity android:name=".ui.activities.NTFTViewMainActivity" />
+        <activity android:name=".ui.activities.NTFPHHRegdActivity" />
+        <activity android:name=".ui.activities.NTFPSHGRegdActivity" />
+        <activity android:name=".ui.activities.NFDetailsViewActivity" />
+        <activity android:name=".ui.activities.NFUpdateActivity" />
+        <activity android:name=".ui.activities.NFViewMainActivity" />
+        <activity android:name=".ui.activities.NFHHRegdActivity" />
+        <activity android:name=".ui.activities.NFSHGRegdActivity" />
+        <activity android:name=".ui.activities.PGRegistrationActivity" />
+        <activity android:name=".ui.activities.FarmingDetailsViewActivity" />
+        <activity android:name=".ui.activities.FarmerUpdateActivity" />
+        <activity android:name=".ui.activities.FarmingViewMainActivity" />
+        <activity android:name=".ui.activities.AddFarmingHHActivity" />
+        <activity android:name=".ui.activities.AddFarmingShgActivity" />
+        <activity
+            android:name=".ui.activities.DairyDetailsViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.DairyUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.DairyViewMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddDiaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddDiaryCLFActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddDiaryHouseHoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddFishCLFActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddFishHouseHoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.FishDetailViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.FishUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.FishViewMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddFishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.PendingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.NewDashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddBirdClusterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddBirdHouseHoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.BirdDetailViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.BirdsUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.BirdsViewMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddBirdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddClusterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddHouseHoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.CreateShgProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.MonthlyViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.DetailViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.UpdateShgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.GoatryViewMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddShgMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ShgMembersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddShgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SHGListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name=".ui.activities.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".receiver.ConnectivityChangeReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

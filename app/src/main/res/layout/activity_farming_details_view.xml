@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.FarmingDetailsViewActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_view_details"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"
+        app:elevation="@dimen/space_0">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_detail_view_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:elevation="@dimen/space_0"
+            app:contentInsetStart="@dimen/space_0">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <views.MonRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Details View"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spn_years"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_activity_back"
+        android:layout_below="@+id/appbar_view_details">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_month_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_16">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:id="@+id/goatry_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:text="@string/farming_item_sales"
+                        android:textColor="#CA2859"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:id="@+id/view_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/goatry_lbl"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:background="#b3b3b3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_divider"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <views.PoppinsMedium
+                                android:id="@+id/tv_sales_lbl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/farming_quantity_sold" />
+
+                            <views.PoppinsMedium
+                                android:id="@+id/tv_sales_uom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/tv_sales_lbl"
+                                android:text="" />
+
+                            <views.PoppinsMedium
+                                android:id="@+id/et_update_sales_qty_sold"
+                                android:layout_width="100dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentEnd="true"
+                                android:gravity="center_vertical" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                app:cardCornerRadius="@dimen/space_16">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:id="@+id/farmer_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:text="@string/farming_item_production"
+                        android:textColor="#CA2859"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:id="@+id/view_divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/farmer_lbl"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:background="#b3b3b3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_divider2"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <views.PoppinsMedium
+                                android:id="@+id/tv_production_lbl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/farming_quantity_produced"/>
+
+
+                            <views.PoppinsMedium
+                                android:id="@+id/tv_prod_uom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/tv_production_lbl"
+                                android:text="(KG) :" />
+
+                            <views.PoppinsMedium
+                                android:id="@+id/et_update_prod_qty_sold"
+                                android:layout_width="100dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentEnd="true"
+                                android:gravity="center_vertical" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:hint="@string/farming_total_input_cost" />
+
+
+                    <views.PoppinsMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/tv_total_input_cost"
+                        android:gravity="center_vertical"
+                        android:text="@string/Rs" />
+
+                    <views.PoppinsMedium
+                        android:id="@+id/tv_total_input_cost"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/space_60"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:hint="@string/farming_seasonal_income"/>
+
+
+                    <views.PoppinsMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/tv_seasonal_income"
+                        android:gravity="center_vertical"
+                        android:text="@string/Rs" />
+
+                    <views.PoppinsMedium
+                        android:id="@+id/tv_seasonal_income"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/space_60"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                app:cardCornerRadius="@dimen/space_4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <views.PoppinsMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/space_16"
+                        android:layout_marginEnd="@dimen/space_16"
+                        android:hint="@string/farming_total_gross_income" />
+
+
+                    <views.PoppinsMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/tv_total_gross_income"
+                        android:gravity="center_vertical"
+                        android:text="@string/Rs" />
+
+                    <views.PoppinsMedium
+                        android:id="@+id/tv_total_gross_income"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/space_60"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionNext"
+                        android:text=""
+                        android:inputType="numberDecimal" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/et_update_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_8"
+                android:background="@drawable/edittext_bg"
+                android:gravity="top|left"
+                android:hint="@string/remark"
+                android:maxLength="126"
+                android:padding="@dimen/space_8"
+                android:textColor="@color/black" />
+
+            <views.PoppinsSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_32"
+                android:text="Supporting Image"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/space_32"
+                android:layout_marginTop="@dimen/space_8"
+                android:src="@drawable/placeholder"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progreses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

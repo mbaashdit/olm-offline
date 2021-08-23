@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aashdit.olmoffline">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".app.OLM"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.activities.DairyUpdateActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.activities.DairyViewMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddDiaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddDiaryCLFActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddDiaryHouseHoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddFishCLFActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddFishHouseHoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.FishDetailViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.FishUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.FishViewMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddFishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.PendingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.NewDashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddBirdClusterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddBirdHouseHoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.BirdDetailViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.BirdsUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.BirdsViewMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddBirdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddClusterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddHouseHoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.CreateShgProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.MonthlyViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.DetailViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.UpdateShgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.GoatryViewMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddShgMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ShgMembersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddShgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SHGListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.aashdit.olmoffline.ui.activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait">
+                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".receiver.ConnectivityChangeReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+    <supports-screens android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true" />
+</manifest>

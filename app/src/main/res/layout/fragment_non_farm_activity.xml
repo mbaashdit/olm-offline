@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_ac_fragment_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:visibility="gone"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        android:id="@+id/toolbar_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <views.MonRegular
+                android:id="@+id/tv_title"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16"
+                android:textSize="18sp"
+                android:text="@string/activity_management" />
+
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/space_16"
+                android:src="@drawable/ic_settings_24"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@+id/toolbar_activity"
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:layout_marginBottom="@dimen/space_8"
+                    android:orientation="vertical">
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spn_scheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_hint="Select Scheme"
+                        app:smsp_isSearchable="true"
+                        app:smsp_enableFloatingLabel="false"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_8" />
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spn_act_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_hint="Select Activity Type"
+                        app:smsp_isSearchable="true"
+                        app:smsp_enableFloatingLabel="false"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_8" />
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/spn_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_hint="Select Activity"
+                        app:smsp_isSearchable="true"
+                        app:smsp_enableFloatingLabel="false"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:layout_marginEnd="@dimen/space_8" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:layout_marginEnd="@dimen/space_8"
+                    android:orientation="horizontal">
+
+                    <views.MonRegular
+                        android:visibility="visible"
+                        android:id="@+id/tv_pg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:layout_marginBottom="@dimen/space_4"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="PG" />
+
+                    <views.MonRegular
+                        android:visibility="visible"
+                        android:id="@+id/tv_eg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:layout_marginBottom="@dimen/space_4"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="EG" />
+
+                    <views.MonRegular
+                        android:id="@+id/tv_shg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:layout_marginBottom="@dimen/space_4"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="@string/shg"/>
+
+                    <views.MonRegular
+                        android:id="@+id/tv_household"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:layout_marginBottom="@dimen/space_4"
+                        android:layout_weight="0.25"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:text="@string/household" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="300dp"
+                    android:layout_marginStart="@dimen/space_8"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:layout_marginEnd="@dimen/space_8"
+                    android:layout_marginBottom="@dimen/space_8"
+                    app:cardCornerRadius="@dimen/space_8">
+
+                    <RelativeLayout
+                        android:visibility="visible"
+                        android:id="@+id/rl_shg_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_menues"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp">
+
+
+                            <views.MonRegular
+                                android:id="@+id/tv_activity_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/space_16"
+                                android:text="@string/total"
+                                android:textColor="#DD084B" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/space_8"
+                                android:layout_marginEnd="@dimen/space_8"
+                                android:layout_toStartOf="@+id/iv_add_shg_details"
+                                android:layout_toEndOf="@+id/tv_activity_total">
+
+                                <EditText
+                                    android:id="@+id/et_search_tearm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="@dimen/space_2"
+                                    android:layout_marginBottom="@dimen/space_2"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:focusableInTouchMode="true"
+                                    android:hint="@string/search" />
+
+
+                            </RelativeLayout>
+                            <!--                    </androidx.cardview.widget.CardView>-->
+
+                            <ImageView
+                                android:id="@+id/iv_search"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_search_24" />
+
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_add_shg_details"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/space_8"
+                                android:src="@drawable/ic_add_box_24" />
+
+                        </RelativeLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_spn_shg"
+                            android:layout_below="@+id/rl_menues"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/space_120"
+                            android:layout_marginStart="@dimen/space_16"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:layout_marginEnd="@dimen/space_16"
+                            android:layout_marginBottom="@dimen/space_8"
+                            app:cardCornerRadius="@dimen/space_4">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spn_select_village"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/space_60" />
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spn_select_shg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/space_60" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:overScrollMode="never"
+                            android:id="@+id/rv_activity_entity_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cv_spn_shg"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:layout_marginBottom="@dimen/space_8"
+                            tools:itemCount="5"
+                            tools:listitem="@layout/cell_nf_activity" />
+
+                        <views.MonRegular
+                            android:visibility="gone"
+                            android:id="@+id/tv_shg_no_items"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Items Found"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
+
+    <!--
+
+                                    android:background="@drawable/search_bg_rect"
+                                    android:drawableEnd="@drawable/ic_search_with_bg"
+                                    android:drawableStart="@drawable/search_left"
+    -->

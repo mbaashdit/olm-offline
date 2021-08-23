@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    tools:context=".ui.MainActivity">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_olm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:id="@+id/iv_logo"/>
+
+
+    <views.RobotoBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Odisha Livelihoods Mission"
+        android:layout_below="@+id/iv_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_8"
+        android:textSize="21sp"
+        android:textAllCaps="true"
+        android:textColor="#DB084B"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/seal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/iv_seal"/>
+
+    <views.MonRegular
+        android:layout_above="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Department of Mission Shakti , Government \n of Odisha"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/space_8"
+        android:layout_marginStart="@dimen/space_32"
+        android:layout_marginEnd="@dimen/space_32"/>
+
+
+
+    <views.MonRegular
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/space_8"
+        android:layout_marginStart="@dimen/space_32"
+        android:layout_marginEnd="@dimen/space_32"/>
+
+</RelativeLayout>
